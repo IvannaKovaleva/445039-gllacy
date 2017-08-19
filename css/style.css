@@ -1,7 +1,7 @@
 body {
 	font-size: 16px;
 	line-height: 22px;
-	color: white;
+	color: green;
 	font-weight: normal;
 	font-family: "Roboto", serif;
 }
@@ -11,5 +11,6 @@ h3 .banner-title {
 }
 
 .visually-hidden {
-	display: none;
+	position: absolute;
+	clip: rect(0 0 0 0);
 }
