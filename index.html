@@ -27,19 +27,22 @@
           </ul>
           <ul class="user-navigation">
             <li>
-              <button><img src="img/loupe.svg" alt="Поиск"></button>
+              <button type="submit"><img src="img/loupe.svg" alt="Поиск"></button>
               <div>
                 <form>
-                  <input type="search" name="search-button" placeholder="Что ищем?">
+                  <input type="search" name="search" placeholder="Что ищем?" id="search-field">
+                  <label class="visually-hidden" for="search-field">Что ищем?</label>
                 </form>
               </div>
             </li>
             <li class="login-button">
-              <button><img src="img/entrance.svg" alt="Вход">Вход</button>
+              <button type="submit"><img src="img/entrance.svg" alt="Вход">Вход</button>
               <div>
                 <form>
-                  <input type="email" name="email" placeholder="Электронная почта">
-                  <input type="password" name="password" placeholder="Пароль">
+                  <input type="email" name="email" placeholder="Электронная почта" id="email-field">
+                  <label class="visually-hidden" for="email-field">Электронная почта</label>
+                  <input type="password" name="password" placeholder="Пароль" id="password-field">
+                  <label class="visually-hidden" for="password-field">Пароль</label>
                   <a class="btn" href="#">Войти</a>
                   <a href="#">Забыли пароль?</a>
                   <a href="#">Новая регистрация</a>
@@ -47,7 +50,7 @@
               </div>
             </li>
             <li>
-              <button><img src="img/basket.svg" alt="Корзина">Пусто</button>
+              <button type="submit"><img src="img/basket.svg" alt="Корзина">Пусто</button>
             </li>
           </ul>
         </nav>
@@ -61,17 +64,17 @@
       <h1 class="visually-hidden">Магазин «Глейси»</h1>
       <ul class="slider">
         <li>
-          <p><img src="img/ice-cream-1.jpg" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом"></p>
+          <p><img src="img/ice-cream-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом"></p>
           <p class="slider-text">Крем-брюле и пломбир с малиновым джемом</p>
           <a class="btn" href="#">Давайте оба!</a>
         </li>
         <li>
-          <p><img src="img/ice-cream-2.jpg" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет"></p>
+          <p><img src="img/ice-cream-2.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет"></p>
           <p class="slider-text">Шоколадный пломбир и лимонный сорбет</p>
           <a class="btn" href="#">Давайте оба!</a>
         </li>
         <li>
-          <p><img src="img/ice-cream-3.jpg" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет"></p>
+          <p><img src="img/ice-cream-3.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет"></p>
           <p class="slider-text">Пломбир с помадкой и клубничный щербет</p>
           <a class="btn" href="#">Давайте оба!</a>
         </li>
@@ -122,7 +125,7 @@
       </section>
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
-        <p сlass="features-text">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</p>
+        <p class="features-text">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</p>
         <ul class="features-list">
           <li class="features-item">
             <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
@@ -147,19 +150,20 @@
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
         </p>
         <form class="newsletter-form">   
-          <input type="email" name="email" placeholder="Электронная почта">
-          <button>Отправить</button>
+          <input type="email" name="email" placeholder="Электронная почта" id="email-field">
+          <label class="visually-hidden" for="email-field">Электронная почта</label>
+          <button type="submit">Отправить</button>
         </form>
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <p>Адрес главного офиса и офлайн магазина:
-          <span>ул. Большая Конюшенная 19/8, Санкт-Петербург<span>
+          <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
           Для заказов по телефону:
           <a class="phone" href="tel:88124502525">8 812 450-25-25</a>
           (с 10 до 20 ежедневно)
         </p>
-        <button>Форма обратной связи</button>
+        <a>Форма обратной связи</a>
       </section>
     </main>
     <section class="map">
@@ -186,5 +190,16 @@
         </section>
       </footer>
     </div>
+    <section>
+      <h2>Мы обязательно вам ответим!</h2>
+      <button type="submit">Закрыть</button>
+      <input type="text" name="username" placeholder="Как вас зовут?" id="username-field">
+      <label class="visually-hidden" for="username-field">Как вас зовут?</label>
+      <input type="text" name="email" placeholder="Ваша почта для ответа?" id="email-field">
+      <label class="visually-hidden" for="email-field">Ваша почта для ответа?</label>
+      <textarea name="comment" rows="10" id="comment-field">Напишите что-нибудь...</textarea>
+      <input type="submit" value="Отправить" id="send-field">
+      <label class="visually-hidden" for="send-field">Отправить</label>
+    </section>
   </body>
 </html>

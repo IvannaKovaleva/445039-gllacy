@@ -17,7 +17,7 @@
               <a href="catalog.html">Каталог</a>
               <ul>
                 <li><b>Новинки</b></li>
-                <li><a href="catalog.html">Сливочное</a></li>
+                <li><a>Сливочное</a></li>
                 <li>Щербеты</li>
                 <li>Фруктовый лед</li>
                 <li>Мелорин</li>
@@ -28,19 +28,22 @@
           </ul>
           <ul class="user-navigation">
             <li>
-              <button><img src="img/loupe.svg" alt="Поиск"></button>
+              <button type="submit"><img src="img/loupe.svg" alt="Поиск"></button>
               <div>
                 <form>
-                  <input type="search" name="search-button" placeholder="Что ищем?">
+                  <input type="search" name="search-button" placeholder="Что ищем?" id="search-field">
+                  <label class="visually-hidden" for="search-field">Что ищем?</label>
                 </form>
               </div>
             </li>
             <li class="login-button">
-              <button><img src="img/entrance.svg" alt="Вход">Вход</button>
+              <button type="submit"><img src="img/entrance.svg" alt="Вход">Вход</button>
               <div>
                 <form>
-                  <input type="email" name="email" placeholder="Электронная почта">
-                  <input type="password" name="password" placeholder="Пароль">
+                  <input type="email" name="email" placeholder="Электронная почта" id="email-field">
+                  <label class="visually-hidden" for="email-field">Электронная почта</label>
+                  <input type="password" name="password" placeholder="Пароль" id="password-field">
+                  <label class="visually-hidden" for="password-field">Пароль</label>
                   <a class="btn" href="#">Войти</a>
                   <a href="#">Забыли пароль?</a>
                   <a href="#">Новая регистрация</a>
@@ -48,7 +51,7 @@
               </div>
             </li>
             <li>
-              <button><img src="img/basket-red.svg" alt="Корзина">2 товара</button>
+              <button type="submit"><img src="img/basket-red.svg" alt="Корзина">2 товара</button>
               <table>
                 <tr>
                   <th>Пломбир с апельсиновым джемом</th>
@@ -101,27 +104,27 @@
           </div>
           <fieldset>
             <legend>Жирность:</legend>
-            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="0-percent" id="0-percent">
-            <label for="0-percent">0%</label>
-            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-10-percent" id="to-10-percent" checked>
-            <label for="to-10-percent">до 10%</label>
-            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-30-percent" id="to-30-percent">
-            <label for="to-30-percent">до 30%</label>
-            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="above-30-percent" id="above-30-percent">
-            <label for="above-30-percent">выше 30%</label>
+            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="0-percent" id="0-percent-field">
+            <label for="0-percent-field">0%</label>
+            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-10-percent" id="to-10-percent-field" checked>
+            <label for="to-10-percent-field">до 10%</label>
+            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-30-percent" id="to-30-percent-field">
+            <label for="to-30-percent-field">до 30%</label>
+            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="above-30-percent" id="above-30-percent-field">
+            <label for="above-30-percent-field">выше 30%</label>
           </fieldset>
           <fieldset>
             <legend>Наполнители:</legend>
-            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="chocolate" checked>
-            <label for="chocolate">шоколадные</label>
-            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar-powder" id="sugar-powder" checked>
-            <label for="sugar-powder">сахарные присыпки</label>
-            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruit" id="fruit">
-            <label for="fruit">фрукты</label>
-            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sirup" id="sirup">
-            <label for="sirup">сиропы</label>
-            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jam" id="jam">
-            <label for="jam">джемы</label>
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="chocolate-field" checked>
+            <label for="chocolate-field">шоколадные</label>
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar-powder" id="sugar-powder-field" checked>
+            <label for="sugar-powder-field">сахарные присыпки</label>
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruit" id="fruit-field">
+            <label for="fruit-field">фрукты</label>
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sirup" id="sirup-field">
+            <label for="sirup-field">сиропы</label>
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jam" id="jam-field">
+            <label for="jam-field">джемы</label>
             <button type="submit" class="filter-button button">Применить</button>
           </fieldset>
         </form>
