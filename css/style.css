@@ -239,3 +239,11 @@ a:active {
   background-color: rgb(237, 237, 237);
   box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004); 
 }
+
+.filter fieldset {
+	border: none;
+}
+
+.pagination-list {
+	list-style: none;
+}
