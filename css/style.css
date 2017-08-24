@@ -63,6 +63,12 @@ a.site-navigation-current {
 	background-color: #f6b5a5; 
 }
 
+a.cream-current {
+	color: #ffffff;
+
+	background-color: #d07058; 
+}
+
 .user-navigation {
 	list-style: none;
 }
