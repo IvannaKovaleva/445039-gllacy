@@ -11,11 +11,11 @@
     <header class="main-header">
       <div class="container">
         <nav class="main-navigation">
-          <a><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
+          <a><img src="img/logo.svg" width="" height="" alt="Логотип магазина «Глейси»">
           </a>  
           <ul class="site-navigation">
             <li>
-              <a href="catalog.html">Каталог</a>
+              <button type="submit">Каталог</button>
               <ul class="novelty">
                 <li><b>Новинки</b></li>
                 <li><a href="catalog.html">Сливочное</a></li>
@@ -24,14 +24,14 @@
                 <li><a href="#">Мелорин</a></li>
               </ul>
             </li>
-            <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">О Компании</a></li>
+            <li><a href="transfer-and-pay.html">Доставка и оплата</a></li>
+            <li><a href="about-company.html">О Компании</a></li>
           </ul>
           <ul class="user-navigation">
             <li>
               <button type="submit"><img src="img/loupe.svg" alt="Поиск"></button>
               <div>
-                <form class="form-search">
+                <form>
                   <input type="search" name="search" placeholder="Что ищем?" id="search-field">
                   <label class="visually-hidden" for="search-field">Что ищем?</label>
                 </form>
@@ -40,14 +40,14 @@
             <li class="login-button">
               <button type="submit"><img src="img/entrance.svg" alt="Вход">Вход</button>
               <div>
-                <form class="form-entrance">
+                <form>
                   <input type="email" name="email" placeholder="Электронная почта" id="email-field-1">
                   <label class="visually-hidden" for="email-field-1">Электронная почта</label>
                   <input type="password" name="password" placeholder="Пароль" id="password-field">
                   <label class="visually-hidden" for="password-field">Пароль</label>
                   <a class="btn" href="#">Войти</a>
-                  <a class="form-entrance" href="#">Забыли пароль?</a>
-                  <a class="form-entrance" href="#">Новая регистрация</a>
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
                 </form>
               </div>
             </li>
@@ -88,16 +88,18 @@
       </ul>
       <section class="banner">
         <h2 class="visually-hidden">Баннер</h2>
-        <section class="banner-raspberry">
-          <h3 class="banner-title">Малинка даром!</h3>
-          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="btn" href="#">Хочу варенье!</a>
-        </section>
-        <section class="banner-chocolate">
-          <h3 class="banner-title">Шоколадки даром!</h3>
-          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="btn" href="#">Хочу шоколадки!</a>
-        </section>
+        <ul class="banner-list">
+          <li class="banner-item">
+            <h3 class="banner-title">Малинка даром!</h3>
+            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a class="btn" href="#">Хочу варенье!</a>
+          </li>
+          <li class="banner-item">
+            <h3 class="banner-title">Шоколадки даром!</h3>
+            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+            <a class="btn" href="#">Хочу шоколадки!</a>
+          </li>
+        </ul>
       </section>
       <section class="popular">
         <h2 class="visually-hidden">Популярное мороженое</h2>
@@ -169,16 +171,6 @@
           (с 10 до 20 ежедневно)
         </p>
         <a class="btn" href="#">Форма обратной связи</a>
-        <section class="feedback">
-          <h2>Мы обязательно вам ответим!</h2>
-          <button class="cross-button" type="submit">Закрыть</button>
-          <input type="text" name="username" placeholder="Как вас зовут?" id="username-field">
-          <label class="visually-hidden" for="username-field">Как вас зовут?</label>
-          <input type="text" name="email" placeholder="Ваша почта для ответа?" id="email-field-3">
-          <label class="visually-hidden" for="email-field-3">Ваша почта для ответа?</label>
-          <textarea name="comment" rows="10" id="comment-field">Напишите что-нибудь...</textarea>
-          <button type="submit">Отправить</button>
-        </section>
       </section>
     </main>
     <section class="map">
@@ -205,5 +197,16 @@
         </section>
       </footer>
     </div>
+    <section class="feedback">
+      <h2>Мы обязательно вам ответим!</h2>
+      <button class="cross-button" type="submit">Закрыть</button>
+      <input type="text" name="username" placeholder="Как вас зовут?" id="username-field">
+      <label class="visually-hidden" for="username-field">Как вас зовут?</label>
+      <input type="text" name="email" placeholder="Ваша почта для ответа?" id="email-field-3">
+      <label class="visually-hidden" for="email-field-3">Ваша почта для ответа?</label>
+      <textarea name="comment" rows="10" id="comment-field">Напишите что-нибудь...</textarea>
+      <input type="submit" value="Отправить" id="send-field">
+      <label class="visually-hidden" for="send-field">Отправить</label>
+    </section>
   </body>
 </html>
