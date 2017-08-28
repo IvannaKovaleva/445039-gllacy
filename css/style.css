@@ -48,6 +48,10 @@ a.site-navigation-current {
 	background-color: #d07058; 
 }
 
+.novelty {
+	display: none;
+}
+
 .novelty li {
 	font-size: 14px;
 	line-height: 16px;
@@ -79,6 +83,14 @@ a.cream-current {
 	font-weight: 500;
 }
 
+.form-search {
+	display: none;
+}
+
+.form-entrance {
+	display: none;
+}
+
 a.form-entrance {
 	color: #323232;
 	font-size: 13px;
@@ -87,9 +99,20 @@ a.form-entrance {
 	text-decoration: underline;
 }
 
+.basket {
+  display: none;
+}
+
+li:nth-child(3) .btn {
+	display: none;
+}
+
 .timetable p {
 	font-size: 14px;
 	line-height: 16px;
+
+	margin:0;
+	padding:0;
 }
 
 .main-phone {
@@ -101,6 +124,22 @@ a.form-entrance {
 .banner-list,
 .catalog-item {
 	list-style: none;
+}
+
+.slider .slider-text,
+.slider .btn {
+  display: none;
+}
+
+.slider li:nth-child(1),
+.slider li:nth-child(2),
+.slider li:nth-child(3) {
+	display: none;
+}
+
+.slider-switches li:nth-child(2),
+.slider-switches li:nth-child(3) {
+  display: none;
 }
 
 .slider li {
@@ -139,12 +178,14 @@ a.form-entrance {
 
 .banner-raspberry {
 	background-color: #b92a41;
-	background-image: url("img/raspberry-fon.jpg");
+	background-image: url("../img/raspberry-fon.jpg");
+	background-repeat: no-repeat;
 }
 
 .banner-chocolate {
 	background-color: #361f13;
-	background-image: url("img/chocolate-fon.jpg");
+	background-image: url("../img/chocolate-fon.jpg");
+	background-repeat: no-repeat;
 }
 
 .banner-title {
@@ -167,13 +208,20 @@ a.form-entrance {
 	font-weight: 500;
 }
 
+.catalog-item a:hover,
+.catalog-item a:focus,
+.catalog-item a:active {
+	color: #ffbc9e;
+	text-decoration: underline;
+}
+
 .catalog-item img {
   border-radius: 50%;
 }
 
 .features {
 	background-color: #e9dcc0;
-	background-image: url("img/waffle.png");
+	background-image: url("../img/waffle.png");
 }
 
 .features-list {
@@ -193,12 +241,12 @@ a.form-entrance {
 }
 
 .blog {
+	background-image: url("../img/strawberry-fon.png");
 	background-color: #f4cfcf;
 }
 
 .blog h2 {
 	font-size: 16px;
-	line-height: 22px;
 	color: #323232;
 	font-weight: 500;
 }
@@ -251,9 +299,25 @@ a.form-entrance {
 	font-weight: 700;
 }
 
+.feedback,
+.contacts {
+	display: none;
+}
+
 .feedback h2 {
 	color: #323232;
 	font-weight: 500;
+}
+
+.feedback textarea {
+	color: #323232;
+}
+
+.main-footer a:hover,
+.main-footer a:focus,
+.main-footer a:active {
+	color: #ffbc9e;
+	text-decoration: underline;
 }
 
 .main-footer-menu li {
@@ -314,5 +378,464 @@ a.form-entrance {
 
 .pagination-list {
 	list-style: none;
+}
+
+
+
+
+
+/*----- Сеточные стили -----*/
+/*-----Главная-----*/
+body {
+
+	/* Временно для сетки */
+	background-image: url("../img/index-network.jp");
+	background-image: url("../img/catalog-network.jp");
+	background-size: 1200px auto;
+	background-repeat: no-repeat;
+}
+
+.container {
+	width: 1146px;
+	margin: 0 auto;
+	padding: 0 27px;
+
+	/* Временно для сетки */
+	background-color: rgba(0, 0, 255, 0.3);
+  outline: 2px solid #0000ff;
+}
+
+.main-header {
+
+	/* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}	
+
+.main-navigation {
+  display: flex;
+  justify-content: space-start;
+
+	/* Временно для сетки */
+	background-color: rgba(178, 34, 34, 0.3);
+	outline: 2px solid #b22222;
+}
+
+.main-header-logo {
+	width: 154px;
+	height: 64px;
+	margin-right: 24px;
+
+	/* Временно для сетки */
+	background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.site-navigation {
+	display: flex;
+	width: 395px;
+	margin: 0;
+	padding: 0;
+	margin-right: 306px;
+
+	list-style: none;
+
+	/* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.user-navigation {
+	display: flex;
+	width: 267px;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+
+	/* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.flex-timetable {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row-reverse;
+
+	/* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.timetable {
+	width: 170px;
+	height: 50px;
+
+	/* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.flex-slider {
+	display: flex;
+
+	/* Временно для сетки */
+	min-height: 530px;
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.slider {
+	width: 645px;
+  height: 530px;
+
+	margin: 0;
+	padding: 0;
+
+  list-style: none;
+
+	/* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.slider-switches {
+  width: 80px;
+  height: 20px;
+  order: -1;
+
+  margin: 0;
+  margin-top: 455px;
+  margin-right: 190px;
+	padding: 0;
+
+  list-style: none;
+
+	/* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.banner {
+	display: flex;
+	margin-bottom: 42px;
+
+	/* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.banner-raspberry {
+	width: 560px;
+  height: 230px;
+  margin-right: 26px;
+
+  /* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.banner-chocolate {
+	width: 560px;
+  height: 230px;
+
+  /* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.popular {
+  width: 1146px;
+  height: 320px;
+  margin-bottom: 40px;
+
+  /* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.catalog-list-index {
+	display: flex; 
+	justify-content: space-between;
+  width: 1146px;
+  height: 267px;
+
+  margin: 0;
+	padding: 0;
+
+  list-style: none;
+
+  /* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.catalog-item {
+	width: 267px;
+	height: 267px;
+
+  /* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.features {
+	width: 1146px;
+	height: 308px;
+	margin-bottom: 42px;
+
+	/* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.feature-list {
+	width: 1146px;
+	height: 308px;
+
+	margin: 0;
+	padding: 0;
+
+  list-style: none;
+
+  /* Временно для сетки */
+	background-color: rgba(178, 34, 34, 0.3);
+	outline: 2px solid #b22222;
+}
+
+.flex-blog-newsletter {
+	display: flex;
+	width: 1146px;
+  height: 221px;
+  margin-bottom: 42px;
+
+	/* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.blog {
+	width: 560px;
+  height: 220px;
+  margin-right: 26px;
+
+  /* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.newsletter {
+	width: 560px;
+  height: 220px;
+
+  /* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.map {
+	width: 1200px;
+	height: 421px;
+	margin: auto;
+	margin-bottom: 20px;
+
+
+	/* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.main-footer {
+	display: flex;
+	justify-content: space-between;
+  width: 1146px; 
+  height: 104px;
+
+	/* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.main-footer-social {
+	width: 185px;
+	height: 42px;
+	margin-top: 20px;
+
+  /* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.main-footer-menu {
+	width: 330px;
+	height: 42px;
+
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+
+  list-style: none;
+
+  /* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.copyright {
+	width: 190px;
+	height: 60px;
+
+	/* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.breadcrumbs {
+	display: flex;
+
+	margin: 0;
+	padding: 0;
+
+	/* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.page-title {
+	width: 385px;
+	height: 28px;
+
+	margin: 0;
+	margin-bottom: 25px; /* из-за хлебных крошек поставила временно, а должно 37px */
+	padding: 0;
+  
+  /* Временно для сетки */
+	background-color: rgba(178, 34, 34, 0.3);
+	outline: 2px solid #b22222;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 40px;
+
+	/* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.sorting {
+  width: 194px;
+  height: 62px;
+  
+  margin: 0;
+  margin-right: 15px;
+  padding: 0;
+
+	/* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.cost {
+	width: 217px;
+  height: 62px;
+  
+  margin: 0;
+  margin-right: 15px;
+  padding: 0; 
+
+	/* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.fatness {
+	width: 417px;
+  height: 62px;
+
+  margin: 0;
+  padding: 0;
+
+	/* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.fillers {
+	width: 702px;
+  height: 62px;
+
+  margin: 0;
+  margin-right: 15px;
+  padding: 0;
+
+	/* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.filter-button {
+	width: 143px;
+  height: 62px;
+
+	/* Временно для сетки */
+  background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.catalog-list-inner {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 0;
+	padding: 0;
+
+  list-style: none;
+
+	/* Временно для сетки */
+	background-color: rgba(0, 128, 0, 0.3);
+  outline: 2px solid #008000;
+}
+
+.catalog-list-inner .catalog-item {
+	margin-right: 26px;
+	margin-bottom: 95px;
+}
+
+li.catalog-item:nth-child(4n) {
+	margin-right: 0px;
+} 
+
+li.catalog-item:nth-child(9),
+li.catalog-item:nth-child(10),
+li.catalog-item:nth-child(11),
+li.catalog-item:nth-child(12) {
+	margin-bottom: 137px;
+} 
+
+.pagination-list {
+	display: flex;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+
+	/* Временно для сетки */
+	background-color: rgba(255, 255, 0, 0.3);
+	outline: 2px solid #ffff00;
+}
+
+.pagination-item {
+	width: 30px;
+	height: 30px;
+}
+
+.inner-page .main-footer {
+	margin-top: 40px;
 }
 

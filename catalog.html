@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <div class="container">
         <nav class="main-navigation">
@@ -32,7 +32,7 @@
             <li>
               <button type="submit"><img src="img/loupe.svg" alt="Поиск"></button>
               <div>
-                <form>
+                <form class="form-search">
                   <input type="search" name="search-button" placeholder="Что ищем?" id="search-field">
                   <label class="visually-hidden" for="search-field">Что ищем?</label>
                 </form>
@@ -41,20 +41,20 @@
             <li class="login-button">
               <button type="submit"><img src="img/entrance.svg" alt="Вход">Вход</button>
               <div>
-                <form>
+                <form class="form-entrance">
                   <input type="email" name="email" placeholder="Электронная почта" id="email-field">
                   <label class="visually-hidden" for="email-field">Электронная почта</label>
                   <input type="password" name="password" placeholder="Пароль" id="password-field">
                   <label class="visually-hidden" for="password-field">Пароль</label>
                   <a class="btn" href="#">Войти</a>
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
+                  <a class="form-entrance" href="#">Забыли пароль?</a>
+                  <a class="form-entrance" href="#">Новая регистрация</a>
                 </form>
               </div>
             </li>
             <li>
               <button type="submit"><img src="img/basket-red.svg" alt="Корзина с товарами">2 товара</button>
-              <table>
+              <table class="basket">
                 <tr>
                   <th>Пломбир с апельсиновым джемом</th>
                   <th>1.5кг <img src="img/cross-small.svg" alt="Умножить"><span>200 руб.</span></th>
@@ -74,9 +74,11 @@
             </li>
           </ul>
         </nav>
-        <div class="timetable">
-          <p>с 10 до 20, ежедневно</p>
-          <a class="main-phone" href="tel:88124502525">8 812 450-25-25</a>
+        <div class="flex-timetable">
+          <div class="timetable">
+            <p>с 10 до 20, ежедневно</p>
+            <a class="main-phone" href="tel:88124502525">8 812 450-25-25</a>
+          </div>  
         </div>
       </div>
     </header>
@@ -90,7 +92,7 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
+          <fieldset class="sorting">
             <legend>Сортировка:</legend>
             <select name="sorting">
               <option value="по популярности">по популярности</option>
@@ -99,12 +101,12 @@
               <option value="по жирности">по жирности</option>
             </select>
           </fieldset>
-          <div>
+          <div class="cost">
             <span>Цена: 100 руб. - 500 руб.</span>
             <div>
             </div>
           </div>
-          <fieldset>
+          <fieldset class="fatness">
             <legend>Жирность:</legend>
             <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="0-percent" id="0-percent-field">
             <label for="0-percent-field">0%</label>
@@ -115,7 +117,7 @@
             <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="above-30-percent" id="above-30-percent-field">
             <label for="above-30-percent-field">выше 30%</label>
           </fieldset>
-          <fieldset>
+          <fieldset class="fillers">
             <legend>Наполнители:</legend>
             <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="chocolate-field" checked>
             <label for="chocolate-field">шоколадные</label>
@@ -127,13 +129,13 @@
             <label for="sirup-field">сиропы</label>
             <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jam" id="jam-field">
             <label for="jam-field">джемы</label>
-            <button type="submit" class="filter-button">Применить</button>
           </fieldset>
+          <button type="submit" class="filter-button">Применить</button>
         </form>
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Каталог мороженого</h2>
-        <ul class="catalog-list">
+        <ul class="catalog-list-inner">
           <li class="catalog-item">
             <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -208,23 +210,23 @@
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item"><a href="#">следующая страница</a></li>
+          <li class="pagination-item"><a href="#">Н</a></li>
           <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">4</a></li>
           <li class="pagination-item"><a href="#">5</a></li>
-          <li class="pagination-item"><a href="#">предыдущая страница</a></li>
-        </ul>
+          <li class="pagination-item"><a href="#">К</a></li>
+        </ul> 
       </section>
     </main>
-    <div>
+    <div class="container">
       <footer class="main-footer">
         <section class="main-footer-social">
-          <a class="social-btn" href="https://twitter.com/gllacy">Твиттер</a>
-          <a class="social-btn" href="https://instagram.com/gllacy">Инстаграм</a> 
-          <a class="social-btn" href="https://facebook.com/gllacy">Фейсбук</a>
-          <a class="social-btn" href="https://vk.com/gllacy">Вконтакте</a>
+          <a class="social-btn" href="https://twitter.com/gllacy"><span class="visually-hidden">Твиттер</span></a>
+          <a class="social-btn" href="https://instagram.com/gllacy"><span class="visually-hidden">Инстаграм</span></a> 
+          <a class="social-btn" href="https://facebook.com/gllacy"><span class="visually-hidden">Фейсбук</span></a>
+          <a class="social-btn" href="https://vk.com/gllacy"><span class="visually-hidden">Вконтакте</span></a>
         </section>
         <ul class="main-footer-menu">
           <li><a href="#"><b class="heart">Для поставщиков</b></a></li>
