@@ -30,30 +30,30 @@
           </ul>
           <ul class="user-navigation">
             <li>
-              <button type="submit"><img src="img/loupe.svg" alt="Поиск"></button>
+              <a class="search-button" href="search.html"><span class="visually-hidden">Поиск</span></a>
               <div>
-                <form class="form-search">
+                <form class="search-form">
                   <input type="search" name="search-button" placeholder="Что ищем?" id="search-field">
                   <label class="visually-hidden" for="search-field">Что ищем?</label>
                 </form>
               </div>
             </li>
-            <li class="login-button">
-              <button type="submit"><img src="img/entrance.svg" alt="Вход">Вход</button>
+            <li>
+              <a class="login-button" href="login.html"><span class="visually-hidden">Вход</span>Вход</a>
               <div>
-                <form class="form-entrance">
+                <form class="login-form">
                   <input type="email" name="email" placeholder="Электронная почта" id="email-field">
                   <label class="visually-hidden" for="email-field">Электронная почта</label>
                   <input type="password" name="password" placeholder="Пароль" id="password-field">
                   <label class="visually-hidden" for="password-field">Пароль</label>
                   <a class="btn" href="#">Войти</a>
-                  <a class="form-entrance" href="#">Забыли пароль?</a>
-                  <a class="form-entrance" href="#">Новая регистрация</a>
+                  <a class="login-form" href="#">Забыли пароль?</a>
+                  <a class="login-form" href="#">Новая регистрация</a>
                 </form>
               </div>
             </li>
             <li>
-              <button type="submit"><img src="img/basket-red.svg" alt="Корзина с товарами">2 товара</button>
+              <a class="basket-button products" href="basket.html"><span class="visually-hidden">Корзина с товарами</span>2 товара</a>
               <table class="basket">
                 <tr>
                   <th>Пломбир с апельсиновым джемом</th>
@@ -69,16 +69,14 @@
                   <th colspan="2"></th>
                   <th>Итого:750 руб.</th>
                 </tr>
+                <a class="btn" href="#">Оформить заказ</a>
               </table>
-              <a class="btn" href="#">Оформить заказ</a>
             </li>
           </ul>
         </nav>
-        <div class="flex-timetable">
-          <div class="timetable">
-            <p>с 10 до 20, ежедневно</p>
-            <a class="main-phone" href="tel:88124502525">8 812 450-25-25</a>
-          </div>  
+        <div class="timetable">
+          <p>с 10 до 20, ежедневно</p>
+          <a class="main-phone" href="tel:88124502525">8 812 450-25-25</a>  
         </div>
       </div>
     </header>
@@ -210,35 +208,37 @@
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item"><a href="#">Н</a></li>
+          <li class="pagination-item-prev"><a href="#">предыдущая страница<img src="img/prev.png" width="8" height="12" alt="предыдущая страница"></a></li>
           <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">4</a></li>
           <li class="pagination-item"><a href="#">5</a></li>
-          <li class="pagination-item"><a href="#">К</a></li>
+          <li class="pagination-item-next"><a href="#">следующая страница<img src="img/next.png" width="8" height="12" alt="следующая страница"></a></li>
         </ul> 
       </section>
     </main>
-    <div class="container">
-      <footer class="main-footer">
-        <section class="main-footer-social">
-          <a class="social-btn" href="https://twitter.com/gllacy"><span class="visually-hidden">Твиттер</span></a>
-          <a class="social-btn" href="https://instagram.com/gllacy"><span class="visually-hidden">Инстаграм</span></a> 
-          <a class="social-btn" href="https://facebook.com/gllacy"><span class="visually-hidden">Фейсбук</span></a>
-          <a class="social-btn" href="https://vk.com/gllacy"><span class="visually-hidden">Вконтакте</span></a>
-        </section>
-        <ul class="main-footer-menu">
-          <li><a href="#"><b class="heart">Для поставщиков</b></a></li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
-        </ul>
-        <section class="copyright">
-          <a href="https://htmlacademy.ru">HTML Academy</a>
-          <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>©2016</p>
-        </section>
-      </footer>
-    </div>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="flex-main-footer">
+          <section class="main-footer-social">
+            <a class="social-btn" href="https://twitter.com/gllacy"><span class="visually-hidden">Твиттер</span></a>
+            <a class="social-btn" href="https://instagram.com/gllacy"><span class="visually-hidden">Инстаграм</span></a> 
+            <a class="social-btn" href="https://facebook.com/gllacy"><span class="visually-hidden">Фейсбук</span></a>
+            <a class="social-btn" href="https://vk.com/gllacy"><span class="visually-hidden">Вконтакте</span></a>
+          </section>
+          <ul class="main-footer-menu">
+            <li><a href="#"><b class="heart">Для поставщиков</b></a></li>
+            <li><a href="#">О производстве</a></li>
+            <li><a href="#">Наши документы</a></li>
+            <li><a href="#">Экологические стандарты</a></li>
+          </ul>
+          <section class="copyright">
+            <a href="https://htmlacademy.ru">HTML Academy</a> 
+            <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>©2016</p>
+          </section>
+        </div>  
+      </div>
+    </footer>
   </body>
 </html>
