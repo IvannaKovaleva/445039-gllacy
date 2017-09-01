@@ -101,20 +101,27 @@
           </fieldset>
           <div class="cost">
             <span>Цена: 100 руб. - 500 руб.</span>
-            <div>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale"><div style="width:70%;" class="bar"></div></div>
+                <div class="toggle min-toggle"></div>
+                <div class="toggle max-toggle"></div>
+              </div>
             </div>
           </div>
-          <fieldset class="fatness">
-            <legend>Жирность:</legend>
-            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="0-percent" id="0-percent-field">
-            <label for="0-percent-field">0%</label>
-            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-10-percent" id="to-10-percent-field" checked>
-            <label for="to-10-percent-field">до 10%</label>
-            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-30-percent" id="to-30-percent-field">
-            <label for="to-30-percent-field">до 30%</label>
-            <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="above-30-percent" id="above-30-percent-field">
-            <label for="above-30-percent-field">выше 30%</label>
-          </fieldset>
+          <div class="fatness">
+            <span>Жирность:</span>
+            <div class="fatness-controls">
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="0-percent" id="0-percent-field">
+              <label for="0-percent-field">0%</label>
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-10-percent" id="to-10-percent-field" checked>
+              <label for="to-10-percent-field">до 10%</label>
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-30-percent" id="to-30-percent-field">
+              <label for="to-30-percent-field">до 30%</label>
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="above-30-percent" id="above-30-percent-field">
+              <label for="above-30-percent-field">выше 30%</label>
+            </div>  
+          </div>  
           <fieldset class="fillers">
             <legend>Наполнители:</legend>
             <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="chocolate-field" checked>

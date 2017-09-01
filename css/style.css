@@ -7,9 +7,10 @@ body {
 	line-height: 22px;
 	font-weight: 700;
 	color: #ffffff;
+	background-color: #849d8f;
 }
 
-.site-wrapper > input[type="radio"] {
+body > input[type="radio"] {
   display: none;
 }
 
@@ -298,9 +299,10 @@ a.cream-current {
 }
 
 .timetable {
-	display: none;
+	position: relative;
+	left: 980px;
 	width: 170px;
-	min-height: 50px;
+	min-height: 45px;
 
 	/* Временно для сетки */
 	outline: 2px solid #ffff00;
@@ -312,16 +314,20 @@ a.cream-current {
 
 	margin:0;
 	padding:0;
+	padding-left: 15px;
 }
 
 .main-phone {
 	font-size: 22px;
 	line-height: 24px;
+
+	margin:0;
+	padding:0;
 }
 
 .slider {
 	position: relative;
-	padding-top: 270px;
+	min-height: 523px;
 	text-align: center;
 }
 
@@ -376,8 +382,8 @@ a.cream-current {
 
 .slider-controls {
 	position: absolute;
-	bottom: 25px;
-	left: 0;
+	bottom: 62px;
+	left: -5;
 	z-index: 20;
 
 	font-size: 0;
@@ -411,6 +417,7 @@ a.cream-current {
 
 .banner {
 	display: flex;
+	height: 229px;
 	margin-bottom: 42px;
 
 	/* Временно для сетки */
@@ -422,6 +429,8 @@ a.cream-current {
 	width: 560px;
   min-height: 100%;
   margin-right: 26px;
+
+  border-radius: 15px;
 
   background-color: #b92a41;
 	background-image: url("../img/raspberry-fon.jpg");
@@ -436,6 +445,8 @@ a.cream-current {
 	width: 560px;
   min-height: 100%;
 
+  border-radius: 15px;
+
 	background-color: #361f13;
 	background-image: url("../img/chocolate-fon.jpg");
 	background-repeat: no-repeat;
@@ -448,17 +459,25 @@ a.cream-current {
 .banner-title {
 	font-size: 35px;
 	line-height: 41px;
+
+	padding-left: 18px;
 }
 
 .banner-list p {
 	font-size: 18px;
 	line-height: 22px;
+
+	padding-left: 18px;
 }
 
 .banner-item .btn {
 	font-size: 18px;
 	line-height: 24px;
 	text-decoration: none;
+
+	padding: 16px 20px;
+
+	float: right;
 }
 
 .popular {
@@ -467,14 +486,12 @@ a.cream-current {
   margin-bottom: 40px;
 
   /* Временно для сетки */
-	background-color: rgba(0, 128, 0, 0.3);
   outline: 2px solid #008000;
 }
 
 .catalog-list-index {
 	display: flex; 
 	justify-content: space-between;
-  width: 1146px;
   min-height: 267px;
 
   margin: 0;
@@ -483,21 +500,36 @@ a.cream-current {
   list-style: none;
 
   /* Временно для сетки */
-	background-color: rgba(0, 128, 0, 0.3);
   outline: 2px solid #008000;
 }
 
 .catalog-item {
+	position: relative;
 	width: 267px;
 	min-height: 267px;
 
   /* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
+}
+
+.hit-mark::before {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	content: "";
+
+	width: 61px;
+	height: 61px;
+
+	background-image: url("../img/hit.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0; 
 }
 
 .catalog-item a {
 	font-weight: 500;
+	text-align: center;
 }
 
 .catalog-item a:hover,
@@ -511,30 +543,52 @@ a.cream-current {
   border-radius: 50%;
 }
 
+.item-price {
+	font-size: 45px;
+	line-height: 45px;
+
+	position: absolute;
+	top: 208px;
+	left: 0px;
+}
+
+.item-price::after {
+	position: absolute;
+	top: 5px;
+	left: 80px;
+
+	content: "";
+
+	width: 31px;
+	height: 36px;
+
+	background-image: url("../img/ruble.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.catalog-item span {
+	font-size: 30px;
+
+	position: absolute;
+	top: 225px;
+	left: 113px;
+}
+
+.catalog-item .btn {
+	display: none;
+}
+
 .features {
-	width: 1146px;
 	min-height: 308px;
 	margin-bottom: 42px;
 
 	background-color: #e9dcc0;
 	background-image: url("../img/waffle.png");
+  border-radius: 15px;
 
 	/* Временно для сетки */
-	background-color: rgba(0, 128, 0, 0.3);
   outline: 2px solid #008000;
-}
-
-.features-list {
-	width: 1146px;
-	min-height: 308px;
-
-	margin: 0;
-	padding: 0;
-  list-style: none;
-
-  /* Временно для сетки */
-	background-color: rgba(178, 34, 34, 0.3);
-	outline: 2px solid #b22222;
 }
 
 .features-text {
@@ -542,16 +596,36 @@ a.cream-current {
 	line-height: 30px;
 	font-weight: 500;
 	color: #323232;
+
+	padding-left: 20px;
+	padding-top: 25px;
+}
+
+.features-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 0;
+	padding: 0;
+  list-style: none;
+
+  /* Временно для сетки */
+	outline: 2px solid #008000;
 }
 
 .features-item p {
+	width: 476px;
+	margin: auto;
+
 	color: #323232;
 	font-weight: 400;
+
+	/* Временно для сетки */
+	outline: 2px solid #ffff00;
 }
 
 .flex-blog-newsletter {
 	display: flex;
-	width: 1146px;
   min-height: 221px;
   margin-bottom: 42px;
 
@@ -764,8 +838,13 @@ a.cream-current {
   margin-bottom: 40px;
 
 	/* Временно для сетки */
-	background-color: rgba(0, 128, 0, 0.3);
   outline: 2px solid #008000;
+}
+
+.filter span {
+	font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
 }
 
 .sorting {
@@ -776,22 +855,72 @@ a.cream-current {
   margin-right: 15px;
   padding: 0;
 
+  background-color: rgba(161, 181, 170, 0.8);
+  border-radius: 15px;
+  
+
 	/* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
 }
 
 .cost {
 	width: 217px;
   min-height: 62px;
-  
+
   margin: 0;
   margin-right: 15px;
   padding: 0; 
-
+  
 	/* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
+}
+
+.cost span {
+	font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+	padding-left: 15px; 
+}
+
+.range-filter {
+	width: 218px;
+	margin-top: 8px;
+}
+
+.range-controls {
+	position: relative;
+	height: 36px;
+	padding: 0 21px;
+	background-color: rgba(161, 181, 170, 0.8);
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.range-controls .scale {
+	margin-top: 16px;
+	height: 4px;
+	background-color: #c4d0c8;
+}
+
+.range-controls .bar {
+	height: 4px;
+	background-color: #dee3de;
+}
+
+.range-controls .toggle {
+	position: absolute;
+	top: 7px;
+	left: 35px;
+	width: 4px;
+	height: 4px;
+	border: 8px solid white;
+	background: #ababab;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.range-controls .max-toggle {
+	left: 130px;
 }
 
 .fatness {
@@ -802,8 +931,19 @@ a.cream-current {
   padding: 0;
 
 	/* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
+}
+
+.fatness-controls {
+	height: 36px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: rgba(161, 181, 170, 0.8);
+	border-radius: 15px;
+}
+
+.fatness-controls label {
+	margin-top: 9px;
 }
 
 .fillers {
@@ -815,7 +955,6 @@ a.cream-current {
   padding: 0;
 
 	/* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
 }
 
@@ -824,7 +963,6 @@ a.cream-current {
   min-height: 62px;
 
 	/* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
 }
 
