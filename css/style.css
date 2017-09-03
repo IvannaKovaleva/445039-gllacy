@@ -49,9 +49,30 @@ input[type="radio"].visually-hidden {
 	background-image: url("../img/ice-cream-1.png");
 	background-repeat: no-repeat;
 	background-position: top center;
+
+	transition: background-image 0.5s ease;
+	background-color: 0.5s ease;
+}
+
+.site-wrapper:before,
+.site-wrapper:after {
+	content: "";
+
+	visibility: hidden;
+}
+
+.site-wrapper:before,
+.site-wrapper:after {
+	background-image: url("ice-cream-3.png");
+}
+
+.site-wrapper:after {
+	background-image: url("ice-cream-2.png");
 }
 
 .container {
+	position: relative;
+
 	width: 1146px;
 	margin: 0 auto;
 	padding: 0 27px;
@@ -69,6 +90,7 @@ input[type="radio"].visually-hidden {
 .main-navigation {
   display: flex;
   justify-content: space-start;
+  position: relative;
 
 	/* Временно для сетки */
 	outline: 2px solid #b22222;
@@ -240,6 +262,11 @@ a.cream-current {
 .login-button:active {
 	color: #323232;
   background-color: #f8f7f4;
+}
+
+.login-button:hover::before,
+.login-button:focus::before,
+.login-button:active::before {
   background-image: url("../img/entrance-black.svg");
 	background-repeat: no-repeat;
 }
@@ -253,6 +280,10 @@ a.cream-current {
 }
 
 .basket {
+	display: none;
+}
+
+.order-button {
 	display: none;
 }
 
@@ -271,7 +302,7 @@ a.cream-current {
 }
 
 .products {
-	padding-right: 17px;
+	padding-right: 15px;
 }
 
 .basket-button::before {
@@ -294,15 +325,23 @@ a.cream-current {
 .basket-button:active {
 	color: #323232;
   background-color: #f8f7f4;
+}
+
+.basket-button:hover::before,
+.basket-button:focus::before,
+.basket-button:active::before {
   background-image: url("../img/basket-red.svg");
 	background-repeat: no-repeat;
 }
 
 .timetable {
-	position: relative;
 	left: 980px;
 	width: 170px;
-	min-height: 45px;
+	min-height: 50px;
+
+	position: absolute;
+	top: 73px;
+	right: 30px;
 
 	/* Временно для сетки */
 	outline: 2px solid #ffff00;
@@ -315,6 +354,7 @@ a.cream-current {
 	margin:0;
 	padding:0;
 	padding-left: 15px;
+	padding-bottom: 4px;
 }
 
 .main-phone {
@@ -327,7 +367,9 @@ a.cream-current {
 
 .slider {
 	position: relative;
-	min-height: 523px;
+
+	min-height: 256px;
+	padding-top: 313px;
 	text-align: center;
 }
 
@@ -355,18 +397,16 @@ a.cream-current {
 	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 	background: #f26843;
 	background-image: linear-gradient(90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-	border-radius: 100px;
+	border-radius: 90px;
 	box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
 
 .slider .btn {
 	display: inline-block;
-	padding: 12px 50px;
+	padding: 11px 42px;
 
-	font-weight: 600;
 	font-size: 32px;
-	line-height: 42px;
-	vertical-align: top;
+	line-height: 41px;
 }
 
 .btn:hover,
@@ -409,19 +449,45 @@ a.cream-current {
 	display: block;
 }
 
+#btn-1:checked ~ .site-wrapper {
+	background-color: #849d8f;
+	background-image: url("../img/ice-cream-1.png");
+}
+
+#btn-2:checked ~ .site-wrapper {
+	background-color: #8996a6;
+	background-image: url("../img/ice-cream-2.png");
+}
+
+#btn-3:checked ~ .site-wrapper {
+	background-color: #9d8b84;
+	background-image: url("../img/ice-cream-3.png");
+}
+
 #btn-1:checked ~ .site-wrapper label[for="btn-1"],
 #btn-2:checked ~ .site-wrapper label[for="btn-2"],
 #btn-3:checked ~ .site-wrapper label[for="btn-3"] {
 	background-color: #ffffff;
 }
 
+#btn-2:checked ~ .site-wrapper .search-button,
+#btn-2:checked ~ .site-wrapper .login-button,
+#btn-2:checked ~ .site-wrapper .basket-button {
+	background-color: #a2adb9;
+}
+
+#btn-3:checked ~ .site-wrapper .search-button,
+#btn-3:checked ~ .site-wrapper .login-button,
+#btn-3:checked ~ .site-wrapper .basket-button {
+	background-color: #b5a6a1;
+}
+
 .banner {
 	display: flex;
 	height: 229px;
-	margin-bottom: 42px;
+	margin-bottom: 40px;
 
 	/* Временно для сетки */
-	background-color: rgba(0, 128, 0, 0.3);
   outline: 2px solid #008000;
 }
 
@@ -434,10 +500,10 @@ a.cream-current {
 
   background-color: #b92a41;
 	background-image: url("../img/raspberry-fon.jpg");
+	background-position: -50px -95px;
 	background-repeat: no-repeat;
 
   /* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
 }
 
@@ -449,10 +515,10 @@ a.cream-current {
 
 	background-color: #361f13;
 	background-image: url("../img/chocolate-fon.jpg");
+	background-position: -217px -105px;
 	background-repeat: no-repeat;
 
 	/* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
 }
 
@@ -460,22 +526,32 @@ a.cream-current {
 	font-size: 35px;
 	line-height: 41px;
 
-	padding-left: 18px;
+	margin: 0;
+	padding: 0;
+	padding-top: 15px;
+  padding-left: 18px;
 }
 
-.banner-list p {
+.banner p {
 	font-size: 18px;
 	line-height: 22px;
 
+  margin: 0;
+	padding: 0;
+	padding-top: 15px;
+	padding-right: 18px;
 	padding-left: 18px;
 }
 
-.banner-item .btn {
+.banner .btn {
+	display: inline-block;
 	font-size: 18px;
 	line-height: 24px;
 	text-decoration: none;
 
-	padding: 16px 20px;
+	padding: 11px 20px;
+  margin-top: 47px;
+  margin-right: 21px;
 
 	float: right;
 }
@@ -483,7 +559,7 @@ a.cream-current {
 .popular {
   width: 1146px;
   min-height: 320px;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   /* Временно для сетки */
   outline: 2px solid #008000;
@@ -528,15 +604,11 @@ a.cream-current {
 }
 
 .catalog-item a {
+	display: inline-block;
 	font-weight: 500;
 	text-align: center;
-}
 
-.catalog-item a:hover,
-.catalog-item a:focus,
-.catalog-item a:active {
-	color: #ffbc9e;
-	text-decoration: underline;
+	padding-top: 7px;
 }
 
 .catalog-item img {
@@ -581,10 +653,10 @@ a.cream-current {
 
 .features {
 	min-height: 308px;
-	margin-bottom: 42px;
+	margin-bottom: 39px;
 
-	background-color: #e9dcc0;
 	background-image: url("../img/waffle.png");
+	background-color: #e9dcc0;
   border-radius: 15px;
 
 	/* Временно для сетки */
@@ -602,10 +674,10 @@ a.cream-current {
 }
 
 .features-list {
+	position: relative;
 	display: flex;
-	flex-wrap: wrap;
+	flex-flow: column wrap;
 
-	margin: 0;
 	padding: 0;
   list-style: none;
 
@@ -614,8 +686,14 @@ a.cream-current {
 }
 
 .features-item p {
-	width: 476px;
-	margin: auto;
+	width: 500px;
+
+	padding: 0;
+	padding-left: 53px;
+	margin: 0;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
 
 	color: #323232;
 	font-weight: 400;
@@ -624,13 +702,68 @@ a.cream-current {
 	outline: 2px solid #ffff00;
 }
 
+.features-list .features-item:first-child::before {
+	position: absolute;
+	top: 5px;
+	left: 17px;
+	content: "";
+
+	width: 49px;
+	height: 49px;
+
+	background-image: url("../img/ice-cream.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0; 
+}
+
+.features-list .features-item:nth-child(2)::before {
+	position: absolute;
+	top: 90px;
+	left: 17px;
+	content: "";
+
+	width: 49px;
+	height: 49px;
+
+	background-image: url("../img/eco.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0; 
+}
+
+.features-list .features-item:nth-child(3)::before {
+	position: absolute;
+	top: 190px;
+	left: 17px;
+	content: "";
+
+	width: 49px;
+	height: 49px;
+
+	background-image: url("../img/cow.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0; 
+}
+
+.features-list .features-item:last-child::before {
+	position: absolute;
+	top: 290px;
+	left: 17px;
+	content: "";
+
+	width: 49px;
+	height: 49px;
+
+	background-image: url("../img/thermometer.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0; 
+}
+
 .flex-blog-newsletter {
 	display: flex;
-  min-height: 221px;
-  margin-bottom: 42px;
+  min-height: 220px;
+  margin-bottom: 39px;
 
 	/* Временно для сетки */
-	background-color: rgba(0, 128, 0, 0.3);
   outline: 2px solid #008000;
 }
 
@@ -640,10 +773,11 @@ a.cream-current {
   margin-right: 26px;
 
 	background-image: url("../img/strawberry-fon.png");
+	background-position: -52px 567px;
 	background-color: #f4cfcf;
+  border-radius: 15px;
 
 	/* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
 }
 
@@ -651,12 +785,24 @@ a.cream-current {
 	font-size: 16px;
 	color: #323232;
 	font-weight: 500;
+
+	padding: 0;
+	padding-top: 22px;
+	padding-left: 20px;
+	padding-bottom: 5px;
+	margin: 0;
 }
 
 .blog a {
+	display: inline-block;
+	width: 300px;
+
 	font-size: 24px;
 	line-height: 30px;
-	font-weight: 500;
+	font-weight: 700;
+
+	padding-left: 20px;
+
 	color: #323232;
   text-decoration: underline;
 }
@@ -664,21 +810,49 @@ a.cream-current {
 .newsletter {
 	width: 560px;
   min-height: 220px;
-	background-color: #f8f7f4;
+
+  background-image: url("../img/bg-post.svg");
+	background-color: #92cdff;
+  border-radius: 15px;
 
 	/* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
+}
+
+.newsletter-fon {
+	width: 540px;
+	min-height: 200px;
+
+  margin: 0px;
+	padding: 2px;
+
+	background-color: #f8f7f4;
+	border-radius: 15px;
+	background-position: 50% 50%;
 }
 
 .newsletter p {
 	color: #5a5a5a;
 	font-weight: 400;
+
+	padding: 0;
+	padding-top: 20px;
+  padding-left: 20px;
+	margin: 0;
+}
+
+.newsletter-form {
+	padding-left: 20px;
 }
 
 .newsletter-form input {
 	line-height: 24px;
   font-weight: 400;
+
+  padding: 10px 15px;
+
+  border-radius: 5px;
+  box-shadow: none;
 }
 
 .newsletter-form button,
@@ -688,20 +862,23 @@ a.cream-current {
 	line-height: 24px;
 	text-decoration: none;
 
+	padding: 11px 20px;
+
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  border: none;
+  border-radius: 20px;
 } 
 
 
 .map {
 	width: 1200px;
-	min-height: 421px;
-	margin: auto;
-	margin-bottom: 20px;
+	min-height: 430px;
 
+  margin: auto;
+	margin-bottom: 10px;
 
 	/* Временно для сетки */
-	background-color: rgba(0, 128, 0, 0.3);
   outline: 2px solid #008000;
 }
 
@@ -710,6 +887,9 @@ a.cream-current {
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 400;
+
+	padding: 0;
+	margin: 0;
 }
 
 .contacts span,
@@ -737,7 +917,6 @@ a.cream-current {
 .main-footer {
 
 	/* Временно для сетки */
-	background-color: rgba(0, 128, 0, 0.3);
   outline: 2px solid #008000;
 }
 
@@ -749,18 +928,32 @@ a.cream-current {
 }
 
 .main-footer-social {
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 	width: 185px;
-	min-height: 42px;
+	min-height: 38px;
 	margin-top: 20px;
 
   /* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
 }
 
+.social-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+}
+
 .main-footer-menu {
-	width: 330px;
-	min-height: 42px;
+	display: flex;
+	flex-wrap: wrap;
+ 
+  width: 330px;
+	min-height: 40px;
 
   margin: 0;
   margin-top: 20px;
@@ -808,26 +1001,61 @@ a.cream-current {
 }
 
 .breadcrumbs {
-	display: flex;
+	position: absolute;
+  
+  font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+
+	top: 20px;
+	left: 27px;
 
 	margin: 0;
 	padding: 0;
 
 	/* Временно для сетки */
-	background-color: rgba(0, 128, 0, 0.3);
   outline: 2px solid #008000;
 }
 
+.breadcrumbs a {
+  padding-right: 20px;
+}
+
+.breadcrumbs a::after {
+	position: absolute;
+
+	content: "»";
+
+	top: 0px;
+	left: 60px;
+
+	color: #ffffff;
+}
+
+.breadcrumbs a:nth-child(2)::after {
+	position: absolute;
+
+	content: "»";
+
+	top: 0px;
+	left: 137px;
+
+	color: #ffffff;
+}
+
 .page-title {
-	width: 385px;
-	min-height: 28px;
+	position: absolute;
+
+	top: 41px;
+	left: 27px;
+
+	font-size: 35px;
+	line-height: 41px;
 
 	margin: 0;
-	margin-bottom: 25px; /* из-за хлебных крошек поставила временно, а должно 37px */
 	padding: 0;
   
   /* Временно для сетки */
-	background-color: rgba(178, 34, 34, 0.3);
 	outline: 2px solid #b22222;
 }
 
@@ -836,6 +1064,7 @@ a.cream-current {
   flex-wrap: wrap;
 
   margin-bottom: 40px;
+  padding-top: 103px;
 
 	/* Временно для сетки */
   outline: 2px solid #008000;
@@ -845,6 +1074,8 @@ a.cream-current {
 	font-size: 14px;
   line-height: 16px;
   font-weight: 500;
+  
+  padding-left: 15px;
 }
 
 .sorting {
@@ -852,19 +1083,45 @@ a.cream-current {
   min-height: 62px;
   
   margin: 0;
-  margin-right: 15px;
+  margin-right: 13px;
   padding: 0;
-
-  background-color: rgba(161, 181, 170, 0.8);
-  border-radius: 15px;
-  
 
 	/* Временно для сетки */
 	outline: 2px solid #ffff00;
 }
 
+.sorting-wrap {
+  position: relative;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+
+  margin-top: 5px;
+	padding: 0;
+	padding-right: 21px;
+	padding-left: 18px;
+	background-color: rgba(161, 181, 170, 0.8);
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.sorting-wrap:hover,
+.sorting-wrap:focus {
+  background-color: #ffffff;
+}
+
+.sorting-select {
+	color: #ffffff;
+	border: none;
+}
+
+.sorting-select:hover,
+.sorting-select:focus {
+	color: #000000;
+}
+
 .cost {
-	width: 217px;
+	width: 219px;
   min-height: 62px;
 
   margin: 0;
@@ -875,22 +1132,17 @@ a.cream-current {
 	outline: 2px solid #ffff00;
 }
 
-.cost span {
-	font-size: 14px;
-  line-height: 16px;
-  font-weight: 500;
-	padding-left: 15px; 
-}
-
-.range-filter {
-	width: 218px;
-	margin-top: 8px;
+.range-wrap {
+	width: 220px;
 }
 
 .range-controls {
 	position: relative;
 	height: 36px;
+
+	margin-top: 5px;
 	padding: 0 21px;
+
 	background-color: rgba(161, 181, 170, 0.8);
 	border-radius: 15px;
 	overflow: hidden;
@@ -920,12 +1172,12 @@ a.cream-current {
 }
 
 .range-controls .max-toggle {
-	left: 130px;
+	left: 135px;
 }
 
 .fatness {
 	width: 417px;
-  min-height: 62px;
+  min-height: 75px;
 
   margin: 0;
   padding: 0;
@@ -934,16 +1186,18 @@ a.cream-current {
 	outline: 2px solid #ffff00;
 }
 
-.fatness-controls {
+.fatness-wrap {
 	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+
+  margin-top: 5px;
+	padding: 0;
 	padding-left: 15px;
 	padding-right: 15px;
+
 	background-color: rgba(161, 181, 170, 0.8);
 	border-radius: 15px;
-}
-
-.fatness-controls label {
-	margin-top: 9px;
 }
 
 .fillers {
@@ -958,9 +1212,23 @@ a.cream-current {
 	outline: 2px solid #ffff00;
 }
 
+.fillers-wrap {
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+
+  margin-top: 5px;
+	padding: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	background-color: rgba(161, 181, 170, 0.8);
+	border-radius: 15px;
+}
+
 .filter-button {
 	width: 143px;
-  min-height: 62px;
+  height: 36px;
 
 	/* Временно для сетки */
 	outline: 2px solid #ffff00;
@@ -981,9 +1249,15 @@ a.cream-current {
 	color:#ffffff;
 	outline: none;
 
+	margin: 0;
+	margin-top: 26px;
+	padding: 0;
+	border: none;
+
 	background-color: #9cb0a4;
   border: 2px solid rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0);
+  border-radius: 55px;
 }
 
 .filter-button:hover,
@@ -997,11 +1271,8 @@ a.cream-current {
   color: #323232;
 
   background-color: rgb(237, 237, 237);
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004); 
-}
-
-.filter fieldset {
-	border: none;
+  border: none;
+  box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105); 
 }
 
 .catalog-list-inner {
@@ -1014,13 +1285,12 @@ a.cream-current {
   list-style: none;
 
 	/* Временно для сетки */
-	background-color: rgba(0, 128, 0, 0.3);
   outline: 2px solid #008000;
 }
 
 .catalog-list-inner .catalog-item {
 	margin-right: 26px;
-	margin-bottom: 95px;
+	margin-bottom: 38px;
 }
 
 li.catalog-item:nth-child(4n) {
@@ -1031,7 +1301,7 @@ li.catalog-item:nth-child(9),
 li.catalog-item:nth-child(10),
 li.catalog-item:nth-child(11),
 li.catalog-item:nth-child(12) {
-	margin-bottom: 137px;
+	margin-bottom: 81px;
 } 
 
 .pagination-list {
