@@ -63,11 +63,11 @@ input[type="radio"].visually-hidden {
 
 .site-wrapper:before,
 .site-wrapper:after {
-	background-image: url("ice-cream-3.png");
+	background-image: url("../img/ice-cream-3.png");
 }
 
 .site-wrapper:after {
-	background-image: url("ice-cream-2.png");
+	background-image: url("../img/ice-cream-2.png");
 }
 
 .container {
@@ -293,7 +293,7 @@ a.cream-current {
 
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-left: 45px;
+  padding-left: 44px;
   padding-right: 34px;
   margin-top: 23px;
 
@@ -336,7 +336,7 @@ a.cream-current {
 
 .timetable {
 	left: 980px;
-	width: 170px;
+	width: 171px;
 	min-height: 50px;
 
 	position: absolute;
@@ -396,7 +396,7 @@ a.cream-current {
 	text-decoration: none;
 	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 	background: #f26843;
-	background-image: linear-gradient(90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+	background-image: linear-gradient(to bottom, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
 	border-radius: 90px;
 	box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
@@ -411,12 +411,12 @@ a.cream-current {
 
 .btn:hover,
 .btn:focus {
-  background-image: linear-gradient(90deg, rgb(245,134,105) 0%, rgb(236,111,94) 100%);
+  background-image: linear-gradient(to bottom, rgb(237,113,95) 0%, rgb(243,131,103) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
 }
 
 .btn:active {
-  background-image: linear-gradient(90deg, rgb(216,71,50) 0%, rgb(225,97,62) 100%);
+  background-image: linear-gradient(to top, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
 }
 
@@ -473,13 +473,13 @@ a.cream-current {
 #btn-2:checked ~ .site-wrapper .search-button,
 #btn-2:checked ~ .site-wrapper .login-button,
 #btn-2:checked ~ .site-wrapper .basket-button {
-	background-color: #a2adb9;
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 #btn-3:checked ~ .site-wrapper .search-button,
 #btn-3:checked ~ .site-wrapper .login-button,
 #btn-3:checked ~ .site-wrapper .basket-button {
-	background-color: #b5a6a1;
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .banner {
@@ -668,31 +668,38 @@ a.cream-current {
 	line-height: 30px;
 	font-weight: 500;
 	color: #323232;
-
-	padding-left: 20px;
+  
 	padding-top: 25px;
+	padding-left: 20px;
+	margin-top: 24px;
+	margin-bottom: 13px;
 }
 
 .features-list {
-	position: relative;
 	display: flex;
-	flex-flow: column wrap;
+	flex-wrap: wrap;
 
 	padding: 0;
+	margin: 0;
+
   list-style: none;
 
   /* Временно для сетки */
 	outline: 2px solid #008000;
 }
 
-.features-item p {
-	width: 500px;
+li.features-item {
+	position: relative;
 
+	width: 570px;
+}
+
+.features-item p {
 	padding: 0;
-	padding-left: 53px;
-	margin: 0;
-	margin-right: 20px;
-	margin-bottom: 20px;
+	padding-left: 56px;
+	margin-top: 7px;
+	margin-right: 18px;
+	margin-bottom: 18px;
 	margin-left: 20px;
 
 	color: #323232;
@@ -702,10 +709,10 @@ a.cream-current {
 	outline: 2px solid #ffff00;
 }
 
-.features-list .features-item:first-child::before {
+.features-item:nth-child(1)::before {
 	position: absolute;
-	top: 5px;
-	left: 17px;
+	top: -3px;
+	left: 20px;
 	content: "";
 
 	width: 49px;
@@ -716,24 +723,10 @@ a.cream-current {
 	background-position: 0 0; 
 }
 
-.features-list .features-item:nth-child(2)::before {
+.features-item:nth-child(2)::before {
 	position: absolute;
-	top: 90px;
-	left: 17px;
-	content: "";
-
-	width: 49px;
-	height: 49px;
-
-	background-image: url("../img/eco.svg");
-	background-repeat: no-repeat; 
-	background-position: 0 0; 
-}
-
-.features-list .features-item:nth-child(3)::before {
-	position: absolute;
-	top: 190px;
-	left: 17px;
+	top: -4px;
+	left: 16px;
 	content: "";
 
 	width: 49px;
@@ -744,10 +737,24 @@ a.cream-current {
 	background-position: 0 0; 
 }
 
-.features-list .features-item:last-child::before {
+.features-item:nth-child(3)::before {
 	position: absolute;
-	top: 290px;
-	left: 17px;
+	top: -5px;
+	left: 20px;
+	content: "";
+
+	width: 49px;
+	height: 49px;
+
+	background-image: url("../img/eco.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0; 
+}
+
+.features-item:nth-child(4)::before {
+	position: absolute;
+	top: -6px;
+	left: 16px;
 	content: "";
 
 	width: 49px;
@@ -811,33 +818,35 @@ a.cream-current {
 	width: 560px;
   min-height: 220px;
 
-  background-image: url("../img/bg-post.svg");
-	background-color: #92cdff;
+  background-image: url("../img/bg-post.png");
+	background-color: #ffffff;
   border-radius: 15px;
 
 	/* Временно для сетки */
 	outline: 2px solid #ffff00;
 }
 
-.newsletter-fon {
-	width: 540px;
-	min-height: 200px;
+.newsletter-inner {
+	width: 550px;
+	min-height: 210px;
 
-  margin: 0px;
-	padding: 2px;
+  margin: 4px;
 
 	background-color: #f8f7f4;
 	border-radius: 15px;
-	background-position: 50% 50%;
+	background-position: 0 0;
 }
 
 .newsletter p {
+	width: 510px;
+
 	color: #5a5a5a;
 	font-weight: 400;
 
 	padding: 0;
-	padding-top: 20px;
-  padding-left: 20px;
+	padding-top: 28px;
+	padding-bottom: 38px;
+  padding-left: 22px;
 	margin: 0;
 }
 
@@ -846,29 +855,52 @@ a.cream-current {
 }
 
 .newsletter-form input {
+  width: 337px;
+
 	line-height: 24px;
   font-weight: 400;
 
-  padding: 10px 15px;
-
+  padding: 9px 15px;
+  margin-right: 10px;
+  
+  border: 1px solid rgba(178,178,178, 0.52);
   border-radius: 5px;
   box-shadow: none;
 }
 
-.newsletter-form button,
-.feedback button:last-child {
+.newsletter-form button {
+	box-sizing: border-box;
+	display: inline-block;
+
 	color: #ffffff;
 	font-size: 18px;
 	line-height: 24px;
+	font-weight: 700;
 	text-decoration: none;
+	letter-spacing: normal;
+  word-spacing: normal;
 
-	padding: 11px 20px;
+	padding: 10px 16px;
 
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
+
+  outline: none;
+  cursor: pointer;
 } 
+
+.newsletter-form button:hover,
+.newsletter-form button:focus {
+  background-image: linear-gradient(to bottom, rgb(237,113,95) 0%, rgb(243,131,103) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+}
+
+.newsletter-form button:active {
+	background-image: linear-gradient(to top, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
+}
 
 
 .map {
@@ -877,6 +909,9 @@ a.cream-current {
 
   margin: auto;
 	margin-bottom: 10px;
+
+	background-image: url("../img/pin-and-map.png");
+	background-repeat: no-repeat;
 
 	/* Временно для сетки */
   outline: 2px solid #008000;
@@ -914,6 +949,22 @@ a.cream-current {
 	color: #323232;
 }
 
+.feedback button:last-child {
+	display: inline-block;
+	
+	color: #ffffff;
+	font-size: 18px;
+	line-height: 24px;
+	text-decoration: none;
+
+	padding: 9px 20px;
+
+  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  border: none;
+  border-radius: 25px;
+} 
+
 .main-footer {
 
 	/* Временно для сетки */
@@ -924,7 +975,7 @@ a.cream-current {
 	display: flex;
 	justify-content: space-between;
   width: 1146px; 
-  min-height: 104px;
+  min-height: 40px;
 }
 
 .main-footer-social {
@@ -932,7 +983,7 @@ a.cream-current {
   flex-wrap: wrap;
   justify-content: space-between;
 
-	width: 185px;
+	width: 183px;
 	min-height: 38px;
 	margin-top: 20px;
 
@@ -944,25 +995,38 @@ a.cream-current {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 42px;
-	height: 42px;
+
+	width: 31px;
+	height: 31px;
+
+	margin-top: 5px;
+
+	border: 3px solid rgba(255, 255, 255, 0.4);
+	border-radius: 50%;
+}
+
+a:hover .icon-item,
+a:focus .icon-item {
+  fill: #ffffff;
+}
+
+a:active .icon-item {
+  fill: rgba(255, 255, 255, 0.4);
 }
 
 .main-footer-menu {
 	display: flex;
+	position: relative;
 	flex-wrap: wrap;
- 
-  width: 330px;
-	min-height: 40px;
 
+  width: 358px;
   margin: 0;
-  margin-top: 20px;
+  margin-top: 18px;
   padding: 0;
 
   list-style: none;
 
   /* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
 }
 
@@ -974,51 +1038,82 @@ a.cream-current {
 }
 
 .main-footer-menu li {
-	font-size: 13px;
-	line-height: 18px;
-	font-weight: 400;
-
-	list-style: none;
+  width: 167px;
 }
 
 .main-footer-menu .heart {
 	font-weight: 700;
+	padding-left: 20px;
+}
+
+.main-footer-menu li:nth-child(3) {
+  padding-left: 20px;
+}
+
+.main-footer-menu a {
+  font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+
+	margin: 0;
+	padding: 0;
+	padding-top: 3px;
+
+	/* Временно для сетки */
+	outline: 2px solid #ffff00;
+}
+
+.main-footer-menu .heart::before {
+	position: absolute;
+	top: 2px;
+	left: -22px;
+	content: "";
+
+	width: 15px;
+	height: 13px;
+
+	background-image: url("../img/heart.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0; 
 }
 
 .copyright {
 	width: 190px;
-	min-height: 60px;
+	min-width: 65px;
 
 	/* Временно для сетки */
-  background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
+}
+
+.copyright img {
+  padding-top: 10px; 
+  padding-left: 2px;
 }
 
 .copyright p {
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: 400;
+
+  padding-bottom: 5px;
+	margin: 0;
 }
 
 .breadcrumbs {
-	position: absolute;
-  
   font-size: 14px;
 	line-height: 16px;
 	font-weight: 400;
 
-	top: 20px;
-	left: 27px;
-
 	margin: 0;
 	padding: 0;
+	padding-top: 21px;
 
 	/* Временно для сетки */
   outline: 2px solid #008000;
 }
 
 .breadcrumbs a {
-  padding-right: 20px;
+  padding-right: 18px;
 }
 
 .breadcrumbs a::after {
@@ -1026,8 +1121,8 @@ a.cream-current {
 
 	content: "»";
 
-	top: 0px;
-	left: 60px;
+	top: 20px;
+	left: 87px;
 
 	color: #ffffff;
 }
@@ -1037,23 +1132,19 @@ a.cream-current {
 
 	content: "»";
 
-	top: 0px;
-	left: 137px;
+	top: 20px;
+	left: 160px;
 
 	color: #ffffff;
 }
 
 .page-title {
-	position: absolute;
-
-	top: 41px;
-	left: 27px;
-
 	font-size: 35px;
 	line-height: 41px;
 
 	margin: 0;
 	padding: 0;
+	padding-top: 5px;
   
   /* Временно для сетки */
 	outline: 2px solid #b22222;
@@ -1064,7 +1155,7 @@ a.cream-current {
   flex-wrap: wrap;
 
   margin-bottom: 40px;
-  padding-top: 103px;
+  padding-top: 21px;
 
 	/* Временно для сетки */
   outline: 2px solid #008000;
@@ -1075,7 +1166,7 @@ a.cream-current {
   line-height: 16px;
   font-weight: 500;
   
-  padding-left: 15px;
+  padding-left: 16px;
 }
 
 .sorting {
@@ -1090,6 +1181,20 @@ a.cream-current {
 	outline: 2px solid #ffff00;
 }
 
+.sorting-select {
+	width: 194px;
+
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+
+  padding-right: 20px;
+	padding-left: 20px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 15px;
+	overflow: hidden;
+}
+
 .sorting-wrap {
   position: relative;
 	height: 36px;
@@ -1098,9 +1203,8 @@ a.cream-current {
 
   margin-top: 5px;
 	padding: 0;
-	padding-right: 21px;
-	padding-left: 18px;
-	background-color: rgba(161, 181, 170, 0.8);
+	padding-left: 5px;
+	background-color: rgba(161, 181, 170, 0.5);
 	border-radius: 15px;
 	overflow: hidden;
 }
@@ -1137,7 +1241,6 @@ a.cream-current {
 }
 
 .range-controls {
-	position: relative;
 	height: 36px;
 
 	margin-top: 5px;
@@ -1149,30 +1252,48 @@ a.cream-current {
 }
 
 .range-controls .scale {
+	position: relative;
 	margin-top: 16px;
 	height: 4px;
 	background-color: #c4d0c8;
 }
 
 .range-controls .bar {
-	height: 4px;
-	background-color: #dee3de;
-}
-
-.range-controls .toggle {
 	position: absolute;
-	top: 7px;
-	left: 35px;
-	width: 4px;
+	top: 0px;
+	left: 30px;
+
+	width: 90px;
 	height: 4px;
-	border: 8px solid white;
-	background: #ababab;
-	cursor: pointer;
-	border-radius: 50%;
+	background-color: #ffffff;
 }
 
-.range-controls .max-toggle {
-	left: 135px;
+.range-controls .bar:before {
+	position: absolute;
+  top: -8px;
+	left: -15px;
+	content: "";
+  
+  width: 20px;
+	height: 23px;
+  
+  background-image: url("../img/filter-button.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0; 
+}
+
+.range-controls .bar:after {
+	position: absolute;
+  top: -8px;
+	left: 83px;
+	content: "";
+  
+  width: 20px;
+	height: 23px;
+  
+  background-image: url("../img/filter-button.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0; 
 }
 
 .fatness {
