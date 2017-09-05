@@ -99,8 +99,9 @@ input[type="radio"].visually-hidden {
 .main-header-logo {
 	width: 154px;
 	min-height: 64px;
-	margin-right: 24px;
+
 	margin-top: 9px;
+	margin-right: 9px;
 
 	/* Временно для сетки */
 	outline: 2px solid #ffff00;
@@ -109,10 +110,12 @@ input[type="radio"].visually-hidden {
 .site-navigation {
 	display: flex;
 	flex-wrap: wrap;
-	width: 395px;
-	margin: 0;
+	width: 390px;
+
 	padding: 0;
-	margin-right: 306px;
+	margin: 0;
+	margin-top: 30px;
+	margin-right: 329px;
 
 	list-style: none;
 
@@ -120,27 +123,32 @@ input[type="radio"].visually-hidden {
 	outline: 2px solid #ffff00;
 }
 
-.site-navigation li {
+.site-navigation a {
 	font-size: 16px;
-	line-height: 18px;
-	
-	padding-top: 30px;
-	padding-right: 28px;
+	line-height: 17px;
+	color: #ffffff;
 
-	list-style: none;
+	padding: 7px 15px;
+
+	background-color: transparent; 
+	border-radius: 15px; 
 }
 
 .site-navigation a:hover,
 .site-navigation a:focus {
 	color: #333333;
 
+	padding: 7px 15px;
+
 	background-color: #f7f6f3; 
+	border-radius: 15px;
 }
 
 .site-navigation a:active {
 	color: #333333;
 
 	background-color: #ededed; 
+	box-shadow: inset 0px 2px 2px 0px rgba(105, 105, 105, 1);
 }
 
 a.site-navigation-current {
@@ -622,6 +630,8 @@ a.cream-current {
 	position: absolute;
 	top: 208px;
 	left: 0px;
+
+	text-shadow: 0 1px 3px rgba(49,50,53, 0.5);
 }
 
 .item-price::after {
@@ -637,6 +647,8 @@ a.cream-current {
 	background-image: url("../img/ruble.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
+
+	text-shadow: 0 1px 3px rgba(49,50,53, 0.5);
 }
 
 .catalog-item span {
@@ -645,6 +657,8 @@ a.cream-current {
 	position: absolute;
 	top: 225px;
 	left: 113px;
+
+	text-shadow: 0 1px 3px rgba(49,50,53, 0.5);
 }
 
 .catalog-item .btn {
@@ -1296,6 +1310,13 @@ a:active .icon-item {
 	background-position: 0 0; 
 }
 
+.filter label {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	color: #eef2f0;
+}
+
 .fatness {
 	width: 417px;
   min-height: 75px;
@@ -1315,19 +1336,68 @@ a:active .icon-item {
   margin-top: 5px;
 	padding: 0;
 	padding-left: 15px;
-	padding-right: 15px;
 
 	background-color: rgba(161, 181, 170, 0.8);
 	border-radius: 15px;
 }
 
+.fatness-radio {
+	position: relative;
+
+  padding-right: 14px;
+	padding-left: 32px;
+
+	cursor: pointer; 
+}
+
+.fatness-radio input[type="radio"] + .radio-indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 22px;
+	height: 22px;
+
+  background-image: url("../img/radio-off.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
+.fatness-radio input[type="radio"]:checked + .radio-indicator {
+  position: absolute;
+  top: -1px;
+	left: -1px;
+	content: "";
+  
+  width: 22px;
+	height: 22px;
+  
+  background-image: url("../img/radio-on.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
+.fatness-radio input[type="radio"] + .radio-indicator:hover,
+.fatness-radio input[type="radio"] + .radio-indicator:focus {
+  background-image: url("../img/radio-off-hover.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
+.fatness-radio input[type="radio"]:checked + .radio-indicator:hover,
+.fatness-radio input[type="radio"]:checked + .radio-indicator:focus {
+  background-image: url("../img/radio-on-hover.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
 .fillers {
-	width: 702px;
+	width: 700px;
   min-height: 62px;
 
-  margin: 0;
-  margin-right: 15px;
   padding: 0;
+  margin: 0;
+  margin-right: 16px;
 
 	/* Временно для сетки */
 	outline: 2px solid #ffff00;
@@ -1341,10 +1411,59 @@ a:active .icon-item {
   margin-top: 5px;
 	padding: 0;
 	padding-left: 15px;
-	padding-right: 15px;
 
 	background-color: rgba(161, 181, 170, 0.8);
 	border-radius: 15px;
+}
+
+.fillers-checkbox {
+	position: relative;
+
+  padding-right: 15px;
+	padding-left: 27px;
+
+	cursor: pointer; 
+}
+
+.fillers-checkbox input[type="checkbox"] + .checkbox-indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 20px;
+	height: 20px;
+
+  background-image: url("../img/checkbox-off.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
+.fillers-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
+  position: absolute;
+  top: 0;
+	left: 0;
+	content: "";
+  
+  width: 24px;
+	height: 20px;
+  
+  background-image: url("../img/checkbox-on.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
+.fillers-checkbox input[type="checkbox"] + .checkbox-indicator:hover,
+.fillers-checkbox input[type="checkbox"] + .checkbox-indicator:focus {
+  background-image: url("../img/checkbox-off-hover.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
+.fillers-checkbox input[type="checkbox"]:checked + .checkbox-indicator:hover,
+.fillers-checkbox input[type="checkbox"]:checked + .checkbox-indicator:focus {
+  background-image: url("../img/checkbox-on-hover.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
 }
 
 .filter-button {
@@ -1422,31 +1541,55 @@ li.catalog-item:nth-child(9),
 li.catalog-item:nth-child(10),
 li.catalog-item:nth-child(11),
 li.catalog-item:nth-child(12) {
-	margin-bottom: 81px;
+	margin-bottom: 83px;
 } 
 
 .pagination-list {
 	display: flex;
 	justify-content: flex-end;
 
-	margin: 0;
+	margin: 0; 
 	padding: 0;
 
 	list-style: none;
 
 	/* Временно для сетки */
-	background-color: rgba(255, 255, 0, 0.3);
 	outline: 2px solid #ffff00;
 }
 
-.pagination-item {
-	width: 30px;
-	min-height: 30px;
+.pagination-item a {
+	display: inline-block;
+
+	font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  text-align: center;
+
+  width: 26px;
+  height: 26px;
+
+  margin: 0px;
+  margin-right: 2px;
+  margin-left: 5px;
 }
 
-.pagination-item-prev,
-.pagination-item-next {
-	font-size: 0;
+.pagination-item-current a {
+	color: #323232;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+	color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.pagination-item a:active {
+	color: #323232;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
 .inner-page .main-footer {

@@ -112,29 +112,33 @@
           <div class="fatness">
             <span>Жирность:</span>
             <div class="fatness-wrap">
-              <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="0-percent" id="0-percent-field">
-              <label for="0-percent-field">0%</label>
-              <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-10-percent" id="to-10-percent-field" checked>
-              <label for="to-10-percent-field">до 10%</label>
-              <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-30-percent" id="to-30-percent-field">
-              <label for="to-30-percent-field">до 30%</label>
-              <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="above-30-percent" id="above-30-percent-field">
-              <label for="above-30-percent-field">выше 30%</label>
+              <label class="fatness-radio" for="0-percent-field">
+                <input class="visually-hidden" type="radio" name="fat-percent" value="0-percent" id="0-percent-field"><span class="radio-indicator"></span>0%</label>
+              <label class="fatness-radio" for="to-10-percent-field">
+                <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-10-percent" id="to-10-percent-field" checked><span class="radio-indicator"></span>до 10%</label>
+              <label class="fatness-radio" for="to-30-percent-field"> 
+                <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-30-percent" id="to-30-percent-field"><span class="radio-indicator"></span>до 30%</label>
+              <label class="fatness-radio" for="above-30-percent-field"> 
+                <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="above-30-percent" id="above-30-percent-field"><span class="radio-indicator"></span>выше 30%</label>
             </div>  
           </div>  
           <div class="fillers">
             <span>Наполнители:</span>
             <div class="fillers-wrap">
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="chocolate-field" checked>
-              <label for="chocolate-field">шоколадные</label>
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar-powder" id="sugar-powder-field" checked>
-              <label for="sugar-powder-field">сахарные присыпки</label>
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruit" id="fruit-field">
-              <label for="fruit-field">фрукты</label>
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sirup" id="sirup-field">
-              <label for="sirup-field">сиропы</label>
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jam" id="jam-field">
-              <label for="jam-field">джемы</label>
+              <label class="fillers-checkbox" for="chocolate-field">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="chocolate-field" checked><span class="checkbox-indicator"></span>шоколадные</label>
+              <label class="fillers-checkbox" for="sugar-powder-field">   
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar-powder" id="sugar-powder-field" checked><span class="checkbox-indicator"></span>сахарные присыпки
+              </label>
+              <label class="fillers-checkbox" for="fruit-field">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruit" id="fruit-field"><span class="checkbox-indicator"></span>фрукты
+              </label>
+              <label class="fillers-checkbox" for="sirup-field">  
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sirup" id="sirup-field"><span class="checkbox-indicator"></span>сиропы
+              </label>
+              <label class="fillers-checkbox" for="jam-field">  
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jam" id="jam-field"><span class="checkbox-indicator"></span>джемы
+              </label>
             </div>  
           </div>
           <button type="submit" class="filter-button">Применить</button>
@@ -229,13 +233,13 @@
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item-prev"><a href="#">предыдущая страница<img src="img/prev.png" width="8" height="12" alt="предыдущая страница"></a></li>
-          <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+          <li class="pagination-item-prev"><a href="#"><img src="img/prev.png" width="8" height="12" alt="предыдущая страница"></a></li>
+          <li class="pagination-item pagination-item-current"><a href="catalog.html">1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">4</a></li>
           <li class="pagination-item"><a href="#">5</a></li>
-          <li class="pagination-item-next"><a href="#">следующая страница<img src="img/next.png" width="8" height="12" alt="следующая страница"></a></li>
+          <li class="pagination-item-next"><a href="#"><img src="img/next.png" width="8" height="12" alt="следующая страница"></a></li>
         </ul> 
       </section>
     </main>
