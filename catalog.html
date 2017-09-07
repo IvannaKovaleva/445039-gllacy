@@ -17,22 +17,22 @@
           <ul class="site-navigation">
             <li>
               <a class="site-navigation-current" href="#">Каталог</a>
-              <ul class="novelty">
-                <li><b>Новинки</b></li>
+              <ul class="sub sub-site-navigation">
+                <li class="novelty">Новинки</li>
                 <li><a class="cream-current" href="#">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лед</a></li>
                 <li><a href="#">Мелорин</a></li>
               </ul>
             </li>
-            <li><a href="transfer-and-pay.html">Доставка и оплата</a></li>
-            <li><a href="about-company.html">О Компании</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">О Компании</a></li>
           </ul>
           <ul class="user-navigation">
-            <li>
+            <li class="opened">
               <a class="search-button" href="search.html"><span class="visually-hidden">Поиск</span></a>
               <div>
-                <form class="search-form">
+                <form class="sub search-form">
                   <input type="search" name="search-button" placeholder="Что ищем?" id="search-field">
                   <label class="visually-hidden" for="search-field">Что ищем?</label>
                 </form>
@@ -41,36 +41,42 @@
             <li>
               <a class="login-button" href="login.html"><span class="visually-hidden">Вход</span>Вход</a>
               <div>
-                <form class="login-form">
+                <form class="sub login-form">
                   <input type="email" name="email" placeholder="Электронная почта" id="email-field">
                   <label class="visually-hidden" for="email-field">Электронная почта</label>
                   <input type="password" name="password" placeholder="Пароль" id="password-field">
                   <label class="visually-hidden" for="password-field">Пароль</label>
                   <a class="btn" href="#">Войти</a>
-                  <a class="login-form" href="#">Забыли пароль?</a>
-                  <a class="login-form" href="#">Новая регистрация</a>
+                  <a class="registration-link" href="#">Забыли пароль?</a>
+                  <a class="registration-link" href="#">Новая регистрация</a>
                 </form>
               </div>
             </li>
-            <li>
+            <li class="basket opened">
               <a class="basket-button products" href="basket.html"><span class="visually-hidden">Корзина с товарами</span>2 товара</a>
-              <table class="basket">
-                <tr>
-                  <th>Пломбир с апельсиновым джемом</th>
-                  <th>1.5кг <img src="img/cross-small.svg" alt="Умножить"><span>200 руб.</span></th>
-                  <th>300 руб.</th>
-                </tr>
-                <tr>
-                  <th>Клубничный пломбир с присыпкой из белого шоколада</th>
-                  <th>1.5кг <img src="img/cross-small.svg" alt="Умножить"><span>300 руб.</span></th>
-                  <th>450 руб.</th>
-                </tr>
-                <tr>
-                  <th colspan="2"></th>
-                  <th>Итого:750 руб.</th>
-                </tr>
-                <a class="order-button" href="#">Оформить заказ</a>
-              </table>
+              <div class="basket-table-wrapper">  
+                <table class="basket-table">
+                  <tr class="row one-row">
+                    <td class="product-close"><button type="submit" value="Удалить товар">Удалить товар</button></td>
+                    <td class="basket-item-image" href="#"><img src="img/product-1.jpg" width="33" height="33" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой""></td>
+                    <td><a>Пломбир с апельсиновым джемом</a></td>
+                    <td>1.5кг x <span>200 руб.</span></td>
+                    <td>300 руб.</td>
+                  </tr>
+                  <tr class="row two-row">
+                    <td class="product-close"><button type="submit" value="Удалить товар">Удалить товар</button></td>
+                    <td class="basket-item-image" href="#"><img src="img/product-3.jpg" width="33" height="33" alt="Сливочно-клубничное с присыпкой из белого шоколада"></td>
+                    <td><a>Клубничный пломбир с присыпкой<br> из белого шоколада</a></td>
+                    <td>1.5кг x <span>300 руб.</span></td>
+                    <td>450 руб.</td>
+                  </tr>
+                  <tr class="row three-row">
+                    <td colspan="4"></td>
+                    <td>Итого:750 руб.</td>
+                  </tr>
+                </table>
+                <button class="click" type="submit">Оформить заказ</button>
+              </div>
             </li>
           </ul>
           <div class="timetable">
@@ -112,33 +118,33 @@
           <div class="fatness">
             <span>Жирность:</span>
             <div class="fatness-wrap">
-              <label class="fatness-radio" for="0-percent-field">
-                <input class="visually-hidden" type="radio" name="fat-percent" value="0-percent" id="0-percent-field"><span class="radio-indicator"></span>0%</label>
-              <label class="fatness-radio" for="to-10-percent-field">
-                <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-10-percent" id="to-10-percent-field" checked><span class="radio-indicator"></span>до 10%</label>
-              <label class="fatness-radio" for="to-30-percent-field"> 
-                <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-30-percent" id="to-30-percent-field"><span class="radio-indicator"></span>до 30%</label>
-              <label class="fatness-radio" for="above-30-percent-field"> 
-                <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="above-30-percent" id="above-30-percent-field"><span class="radio-indicator"></span>выше 30%</label>
+              <input class="visually-hidden" type="radio" name="fat-percent" value="0-percent" id="0-percent-field">
+              <label class="fatness-radio" for="0-percent-field">0%</label>
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-10-percent" id="to-10-percent-field" checked>  
+              <label class="fatness-radio" for="to-10-percent-field">до 10%</label>
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="to-30-percent" id="to-30-percent-field">
+              <label class="fatness-radio" for="to-30-percent-field">до 30%</label>
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat-percent" value="above-30-percent" id="above-30-percent-field">
+              <label class="fatness-radio" for="above-30-percent-field">выше 30%</label>
             </div>  
           </div>  
           <div class="fillers">
             <span>Наполнители:</span>
             <div class="fillers-wrap">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="chocolate-field" checked>
               <label class="fillers-checkbox" for="chocolate-field">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="chocolate-field" checked><span class="checkbox-indicator"></span>шоколадные</label>
-              <label class="fillers-checkbox" for="sugar-powder-field">   
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar-powder" id="sugar-powder-field" checked><span class="checkbox-indicator"></span>сахарные присыпки
-              </label>
+              шоколадные</label>       
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar-powder" id="sugar-powder-field" checked> 
+              <label class="fillers-checkbox" for="sugar-powder-field">сахарные присыпки</label>
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruit" id="fruit-field">
               <label class="fillers-checkbox" for="fruit-field">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruit" id="fruit-field"><span class="checkbox-indicator"></span>фрукты
-              </label>
+              фрукты</label>
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sirup" id="sirup-field">
               <label class="fillers-checkbox" for="sirup-field">  
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sirup" id="sirup-field"><span class="checkbox-indicator"></span>сиропы
-              </label>
+              сиропы</label>
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jam" id="jam-field">
               <label class="fillers-checkbox" for="jam-field">  
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jam" id="jam-field"><span class="checkbox-indicator"></span>джемы
-              </label>
+              джемы</label>
             </div>  
           </div>
           <button type="submit" class="filter-button">Применить</button>
@@ -233,13 +239,13 @@
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item-prev"><a href="#"><img src="img/prev.png" width="8" height="12" alt="предыдущая страница"></a></li>
+          <li class="pagination-item pagination-item-prev"><a href="#"><img src="img/prev.png" width="8" height="12" alt="предыдущая страница"></a></li>
           <li class="pagination-item pagination-item-current"><a href="catalog.html">1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">4</a></li>
           <li class="pagination-item"><a href="#">5</a></li>
-          <li class="pagination-item-next"><a href="#"><img src="img/next.png" width="8" height="12" alt="следующая страница"></a></li>
+          <li class="pagination-item pagination-item-next"><a href="#"><img src="img/next.png" width="8" height="12" alt="следующая страница"></a></li>
         </ul> 
       </section>
     </main>
@@ -260,7 +266,7 @@
             </ul>
             <section class="copyright">
               <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy"></a> 
-              <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>©2017</p>
+              <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2017</p>
             </section>
           </div>
         </div>
