@@ -76,24 +76,12 @@ input[type="radio"].visually-hidden {
 	width: 1146px;
 	margin: 0 auto;
 	padding: 0 27px;
-
-	/* Временно для сетки */
-  outline: 2px solid #0000ff;
 }
-
-.main-header {
-
-	/* Временно для сетки */
-  outline: 2px solid #008000;
-}	
 
 .main-navigation {
   display: flex;
-  justify-content: space-start;
+  justify-content: flex-start;
   position: relative;
-
-	/* Временно для сетки */
-	outline: 2px solid #b22222;
 }
 
 .main-header-logo {
@@ -102,9 +90,6 @@ input[type="radio"].visually-hidden {
 
 	margin-top: 9px;
 	margin-right: 9px;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .site-navigation {
@@ -115,37 +100,46 @@ input[type="radio"].visually-hidden {
 
 	padding: 0;
 	margin: 0;
-	margin-top: 30px;
+	margin-top: 23px;
 	margin-right: 329px;
+	margin-bottom: 20px;
 
 	list-style: none;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
-.site-navigation a {
+.top > a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.top:hover > a {
+	color: #323232;
+  border-bottom: none;
+}
+
+.site-navigation > li {
 	font-size: 16px;
 	line-height: 17px;
-	color: #ffffff;
 
-	padding: 7px 15px;
+  padding-top: 7px;
+  padding-right: 14px;
+  padding-bottom: 6px;
+  padding-left: 14px;
 
-	background-color: transparent; 
-	border-radius: 15px; 
+	color: #ffffff; 
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
-	color: #333333;
-
-	padding: 7px 15px;
+.site-navigation > li:hover,
+.site-navigation > li:focus {
+	padding-top: 7px;
+  padding-right: 14px;
+  padding-bottom: 6px;
+  padding-left: 14px;
 
 	background-color: #f7f6f3; 
 	border-radius: 15px;
 }
 
-.site-navigation a:active {
+.site-navigation > li:active {
 	color: #333333;
 
 	background-color: #ededed; 
@@ -160,16 +154,20 @@ input[type="radio"].visually-hidden {
 .sub-site-navigation {
 	display: none;
 	position: absolute;
-  top: 30px;
+  top: 37px;
   left: 4px;
   z-index: 40;
 
-	width: 100px;
+	width: 135px;
 	margin: 0;
-	padding: 0px 20px;
+	padding: 0px 0px;
 
 	list-style: none;
 	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.sub-site-navigation li {
+	padding: 8px 20px;
 }
 
 .sub-site-navigation a {
@@ -181,24 +179,22 @@ input[type="radio"].visually-hidden {
 
   white-space: nowrap;
 	color: #323232;
+}
 
-	padding: 0;
-	margin-top: 13px;
-	margin-right: 10px;
-	margin-bottom: 13px;
+.novelty a {
+  font-weight: 700;
 }
 
 li.novelty {
-  font-weight: 700;
-  border-bottom: 1px solid #d1d0ce;	
+	border-bottom: 1px solid #d1d0ce;
 }
 
 .site-navigation > li:hover .sub-site-navigation {
 	display: block;
 }
 
-.site-navigation .sub-site-navigation li:hover, 
-.site-navigation .sub-site-navigation li:focus {
+.sub-site-navigation li:hover, 
+.sub-site-navigation li:focus {
 	background-color: #fbded7; 
 }
 
@@ -206,10 +202,22 @@ li.novelty {
 	background-color: #f6b5a5; 
 }
 
-a.cream-current {
-	color: #ffffff;
-
+.site-navigation-current {
 	background-color: #d07058; 
+	border-radius: 15px;
+}
+
+.site-navigation-current > a {
+	color: #ffffff;
+	border-bottom: none;
+}
+
+.cream-current {
+	background-color: #d07058; 
+}
+
+.cream-current a {
+	color: #ffffff;
 }
 
 .user-navigation {
@@ -221,9 +229,6 @@ a.cream-current {
 	padding: 0;
 
 	list-style: none;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .user-navigation a {
@@ -328,10 +333,14 @@ a.cream-current {
 	padding: 11px 20px;
 }
 
-a.registration-link  {
+.flex-registration {
+  display: flex;
+}
+
+.registration-link a  {
 	display: block;
 	width: 140px;
-	margin-left: 100px;
+	margin-left: 25px;
 	color: #323232;
   text-decoration: underline;
 }
@@ -391,8 +400,8 @@ a.registration-link  {
 
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-left: 44px;
-  padding-right: 34px;
+  padding-left: 43px;
+  padding-right: 32px;
   margin-top: 23px;
 
 	background-color: rgba(161, 181, 170, 0.8);
@@ -451,6 +460,7 @@ a.registration-link  {
 	color: #323232;
 	background-color: #f8f7f4;
 	border-radius: 5px;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
 }
 
 .basket-table {
@@ -549,12 +559,12 @@ a.registration-link  {
 	display: block;
 }
 
-.user-navigation > .opened > a.basket-button {
+.user-navigation > .shop > a.basket-button {
 	color: #323232;
   background-color: #f8f7f4;
 }
 
-.user-navigation > .opened > a.basket-button::before {
+.user-navigation > .shop > a.basket-button::before {
   background-image: url("../img/basket-red.svg");
 	background-repeat: no-repeat;
 }
@@ -568,9 +578,6 @@ a.registration-link  {
 	top: 73px;
 	right: 30px;
   z-index: 10;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .timetable p {
@@ -601,11 +608,6 @@ a.registration-link  {
 
 .slide {
 	display: none;
-}
-
-.banner-list,
-.catalog-item {
-	list-style: none;
 }
 
 .slider-text {
@@ -708,13 +710,15 @@ a.registration-link  {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
+.banner-list,
+.catalog-item {
+	list-style: none;
+}
+
 .banner {
 	display: flex;
 	height: 229px;
 	margin-bottom: 40px;
-
-	/* Временно для сетки */
-  outline: 2px solid #008000;
 }
 
 .banner-raspberry {
@@ -728,9 +732,6 @@ a.registration-link  {
 	background-image: url("../img/raspberry-fon.jpg");
 	background-position: -50px -95px;
 	background-repeat: no-repeat;
-
-  /* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .banner-chocolate {
@@ -743,9 +744,6 @@ a.registration-link  {
 	background-image: url("../img/chocolate-fon.jpg");
 	background-position: -217px -105px;
 	background-repeat: no-repeat;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .banner-title {
@@ -755,7 +753,7 @@ a.registration-link  {
 	margin: 0;
 	padding: 0;
 	padding-top: 15px;
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
 .banner p {
@@ -776,8 +774,8 @@ a.registration-link  {
 	text-decoration: none;
 
 	padding: 11px 20px;
-  margin-top: 47px;
-  margin-right: 21px;
+  margin-top: 45px;
+  margin-right: 24px;
 
 	float: right;
 }
@@ -809,6 +807,9 @@ a.registration-link  {
 	position: relative;
 	width: 267px;
 	min-height: 267px;
+
+	padding-right: 9px;
+	padding-left: 9px;
 
 	text-align: center;
 
@@ -883,30 +884,57 @@ a.registration-link  {
 	text-shadow: 0 1px 3px rgba(49,50,53, 0.5);
 }
 
-.catalog-item .btn {
+.catalog-item-hover .btn {
 	display: none;
+
+	position: absolute;
+	top: 330px;
+	left: 50px;
+	content: "";
+
+	padding: 12px 15px;
+}
+
+.catalog-item-hover::after {
+	display: none;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	z-index: 10;
+
+	width: 285px;
+	height: 345px;
+	padding-bottom: 50px;
+
+	border-radius: 5px;
+	background: transparent;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.catalog-item:hover ~ .catalog-item-hover::after, .btn {
+	display: block;
 }
 
 .features {
-	min-height: 308px;
-	margin-bottom: 39px;
+	min-height: 306px;
+	margin-bottom: 40px;
 
 	background-image: url("../img/waffle.png");
 	background-color: #e9dcc0;
   border-radius: 15px;
-
-	/* Временно для сетки */
-  outline: 2px solid #008000;
 }
 
 .features-text {
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: 500;
+	letter-spacing: 0.03px;
 	color: #323232;
   
-	padding-top: 25px;
-	padding-left: 20px;
+	padding-top: 24px;
+	padding-left: 21px;
 	margin-bottom: 13px;
 }
 
@@ -918,9 +946,6 @@ a.registration-link  {
 	margin: 0;
 
   list-style: none;
-
-  /* Временно для сетки */
-	outline: 2px solid #008000;
 }
 
 li.features-item {
@@ -932,17 +957,13 @@ li.features-item {
 
 .features-item p {
 	padding: 0;
-	padding-left: 54px;
+	padding-left: 56px;
 	margin-top: 8px;
-	margin-right: 3px;
 	margin-bottom: 18px;
 	margin-left: 19px;
 
 	color: #323232;
 	font-weight: 400;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .features-item:nth-child(1)::before {
@@ -1005,9 +1026,6 @@ li.features-item {
 	display: flex;
   min-height: 220px;
   margin-bottom: 39px;
-
-	/* Временно для сетки */
-  outline: 2px solid #008000;
 }
 
 .blog {
@@ -1019,9 +1037,6 @@ li.features-item {
 	background-position: -52px 567px;
 	background-color: #f4cfcf;
   border-radius: 15px;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .blog h2 {
@@ -1030,7 +1045,7 @@ li.features-item {
 	font-weight: 500;
 
 	padding: 0;
-	padding-top: 22px;
+	padding-top: 23px;
 	padding-left: 20px;
 	padding-bottom: 5px;
 	margin: 0;
@@ -1057,9 +1072,6 @@ li.features-item {
   background-image: url("../img/bg-post.png");
 	background-color: #ffffff;
   border-radius: 15px;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .newsletter-inner {
@@ -1080,9 +1092,9 @@ li.features-item {
 	font-weight: 400;
 
 	padding: 0;
-	padding-top: 28px;
+	padding-top: 30px;
 	padding-bottom: 38px;
-  padding-left: 22px;
+  padding-left: 23px;
 	margin: 0;
 }
 
@@ -1091,13 +1103,14 @@ li.features-item {
 }
 
 .newsletter-form input {
-  width: 337px;
+  width: 335px;
 
 	line-height: 24px;
   font-weight: 400;
 
-  padding: 9px 15px;
-  margin-right: 10px;
+  padding: 8px 16px;
+  margin-right: 8px;
+  margin-left: 2px;
   
   border: 1px solid rgba(178,178,178, 0.52);
   border-radius: 5px;
@@ -1116,7 +1129,7 @@ li.features-item {
 	letter-spacing: normal;
   word-spacing: normal;
 
-	padding: 10px 16px;
+	padding: 9px 16px;
 
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
@@ -1150,8 +1163,6 @@ li.features-item {
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 
-	/* Временно для сетки */
-  outline: 2px solid #008000;
 }
 
 .contacts-and-feedback {
@@ -1161,7 +1172,8 @@ li.features-item {
 .contacts {
 	position: absolute;
 	top: -376px;
-	right: 188px;
+	right: 50%;
+	margin-right: -572px; 
 
 	width: 300px;
 	min-height: 303px;
@@ -1183,12 +1195,14 @@ li.features-item {
 }
 
 .contacts .address {
-	margin-top: 27px;
+	margin-top: 29px;
 }
 
 .contacts .phone-number {
-	margin-top: 21px;
-	margin-bottom: 28px;
+	line-height: 23px;
+
+	margin-top: 18px;
+	margin-bottom: 26px;
 }
 
 .contacts button {
@@ -1282,12 +1296,6 @@ li.features-item {
 	margin-left: 289px;
 }
 
-.main-footer {
-
-	/* Временно для сетки */
-  outline: 2px solid #008000;
-}
-
 .flex-main-footer {
 	display: flex;
 	justify-content: space-between;
@@ -1300,18 +1308,14 @@ li.features-item {
   flex-wrap: wrap;
   justify-content: space-between;
 
-	width: 183px;
+	width: 185px;
 	min-height: 38px;
 	margin-top: 20px;
-
-  /* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .social-btn {
 	display: flex;
-	align-items: center;
-	justify-content: center;
+
 
 	width: 32px;
 	height: 32px;
@@ -1369,9 +1373,6 @@ li.features-item {
   padding: 0;
 
   list-style: none;
-
-  /* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .main-footer a:hover,
@@ -1384,7 +1385,9 @@ li.features-item {
 .main-footer-menu li {
 	position: relative;
   width: 125px;
-
+  min-height: 18px;
+  
+  margin-top: 3px;
   margin-left: 19px;
 }
 
@@ -1399,9 +1402,6 @@ li.features-item {
 	white-space: nowrap;
 
 	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff0;
 }
 
 .heart a {
@@ -1410,8 +1410,8 @@ li.features-item {
 
 .main-footer-menu .heart::before {
 	position: absolute;
-	top: 7px;
-	left: -20px;
+	top: 5px;
+	left: -21px;
 	content: "";
 
 	width: 15px;
@@ -1425,9 +1425,6 @@ li.features-item {
 .copyright {
 	width: 190px;
 	min-width: 65px;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .copyright img {
@@ -1456,9 +1453,6 @@ li.features-item {
 	margin: 0;
 	padding: 0;
 	padding-top: 21px;
-
-	/* Временно для сетки */
-  outline: 2px solid #008000;
 }
 
 .breadcrumbs a {
@@ -1493,29 +1487,24 @@ li.features-item {
 
 	margin: 0;
 	padding: 0;
-	padding-top: 5px;
-  
-  /* Временно для сетки */
-	outline: 2px solid #b22222;
+	padding-top: 3px;
 }
 
 .filter {
   display: flex;
   flex-wrap: wrap;
 
-  margin-bottom: 40px;
+  margin-bottom: 41px;
   padding-top: 21px;
-
-	/* Временно для сетки */
-  outline: 2px solid #008000;
 }
 
 .filter span {
 	font-size: 14px;
   line-height: 16px;
   font-weight: 500;
-  
+
   padding-left: 16px;
+  padding-bottom: 1px;
 }
 
 .sorting {
@@ -1525,9 +1514,6 @@ li.features-item {
   margin: 0;
   margin-right: 13px;
   padding: 0;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .sorting-wrap {
@@ -1553,13 +1539,12 @@ li.features-item {
 	padding-left: 12px;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 15px;
-	overflow: hidden;
 }
 
-.sorting-select::after {
+.sorting-select::before {
 	position: absolute;
-  top: 0px;
-	left: 0px;
+  top: 0;
+	left: 0;
 	content: "";
 
 	width: 9px;
@@ -1592,9 +1577,6 @@ li.features-item {
   margin: 0;
   margin-right: 15px;
   padding: 0; 
-  
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .range-wrap {
@@ -1629,7 +1611,7 @@ li.features-item {
 	background-color: #ffffff;
 }
 
-.range-controls .bar:before {
+.range-controls .bar::before {
 	position: absolute;
   top: -8px;
 	left: -15px;
@@ -1643,7 +1625,7 @@ li.features-item {
 	background-position: 0 0; 
 }
 
-.range-controls .bar:after {
+.range-controls .bar::after {
 	position: absolute;
   top: -8px;
 	left: 83px;
@@ -1670,9 +1652,6 @@ li.features-item {
 
   margin: 0;
   padding: 0;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .fatness-wrap {
@@ -1701,6 +1680,7 @@ input[type="radio"] + .fatness-radio::before {
 	position: absolute;
 	top: -1px;
 	left: -1px;
+	content: "";
 
 	width: 22px;
 	height: 22px;
@@ -1745,9 +1725,6 @@ input[type="radio"]:checked + .fatness-radio::before:focus {
   padding: 0;
   margin: 0;
   margin-right: 16px;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .fillers-wrap {
@@ -1757,7 +1734,7 @@ input[type="radio"]:checked + .fatness-radio::before:focus {
 
   margin-top: 5px;
 	padding: 0;
-	padding-left: 15px;
+	padding-left: 16px;
 
 	background-color: rgba(161, 181, 170, 0.8);
 	border-radius: 15px;
@@ -1766,16 +1743,22 @@ input[type="radio"]:checked + .fatness-radio::before:focus {
 .fillers-checkbox {
 	position: relative;
 
-  padding-right: 15px;
-	padding-left: 27px;
+  padding-right: 17px;
+	padding-left: 32px;
 
 	cursor: pointer; 
 }
 
-.fillers-checkbox input[type="checkbox"] + .checkbox-indicator {
+.fillers-checkbox:nth-child(4) {
+  padding-right: 18px;
+}
+
+
+input[type="checkbox"] + .fillers-checkbox::before {
 	position: absolute;
 	top: 0;
 	left: 0;
+	content: "";
 
 	width: 20px;
 	height: 20px;
@@ -1785,7 +1768,7 @@ input[type="radio"]:checked + .fatness-radio::before:focus {
 	background-position: 0 0;
 }
 
-.fillers-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
+input[type="checkbox"]:checked + .fillers-checkbox::before {
   position: absolute;
   top: 0;
 	left: 0;
@@ -1799,15 +1782,15 @@ input[type="radio"]:checked + .fatness-radio::before:focus {
 	background-position: 0 0;
 }
 
-.fillers-checkbox input[type="checkbox"] + .checkbox-indicator:hover,
-.fillers-checkbox input[type="checkbox"] + .checkbox-indicator:focus {
+input[type="checkbox"] + .fillers-checkbox::before:hover,
+input[type="checkbox"] + .fillers-checkbox::before:focus {
   background-image: url("../img/checkbox-off-hover.svg");
 	background-repeat: no-repeat; 
 	background-position: 0 0;
 }
 
-.fillers-checkbox input[type="checkbox"]:checked + .checkbox-indicator:hover,
-.fillers-checkbox input[type="checkbox"]:checked + .checkbox-indicator:focus {
+input[type="checkbox"]:checked + .fillers-checkbox::before:hover,
+input[type="checkbox"]:checked + .fillers-checkbox::before:focus {
   background-image: url("../img/checkbox-on-hover.svg");
 	background-repeat: no-repeat; 
 	background-position: 0 0;
@@ -1866,8 +1849,9 @@ input[type="radio"]:checked + .fatness-radio::before:focus {
 	display: flex;
 	flex-wrap: wrap;
 
-	margin: 0;
 	padding: 0;
+	margin: 0;
+	margin-bottom: 43px;
 
   list-style: none;
 
@@ -1884,13 +1868,6 @@ li.catalog-item:nth-child(4n) {
 	margin-right: 0px;
 } 
 
-li.catalog-item:nth-child(9),
-li.catalog-item:nth-child(10),
-li.catalog-item:nth-child(11),
-li.catalog-item:nth-child(12) {
-	margin-bottom: 83px;
-} 
-
 .pagination-list {
 	display: flex;
 	justify-content: flex-end;
@@ -1899,9 +1876,11 @@ li.catalog-item:nth-child(12) {
 	padding: 0;
 
 	list-style: none;
+}
 
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
+.pagination-item {
+	margin-right: 1px;
+	margin-left: 1px;
 }
 
 .pagination-item a {

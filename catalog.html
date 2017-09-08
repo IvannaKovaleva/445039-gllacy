@@ -15,21 +15,21 @@
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»"> 
           </a>
           <ul class="site-navigation">
-            <li>
-              <a class="site-navigation-current" href="#">Каталог</a>
+            <li class="top site-navigation-current">
+              <a href="#">Каталог</a>
               <ul class="sub sub-site-navigation">
-                <li class="novelty">Новинки</li>
-                <li><a class="cream-current" href="#">Сливочное</a></li>
+                <li class="novelty"><a href="#">Новинки</a></li>
+                <li class="cream-current"><a href="#">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лед</a></li>
                 <li><a href="#">Мелорин</a></li>
               </ul>
             </li>
-            <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">О Компании</a></li>
+            <li class="top"><a href="#">Доставка и оплата</a></li>
+            <li class="top"><a href="#">О Компании</a></li>
           </ul>
           <ul class="user-navigation">
-            <li class="opened">
+            <li>
               <a class="search-button" href="search.html"><span class="visually-hidden">Поиск</span></a>
               <div>
                 <form class="sub search-form">
@@ -46,19 +46,23 @@
                   <label class="visually-hidden" for="email-field">Электронная почта</label>
                   <input type="password" name="password" placeholder="Пароль" id="password-field">
                   <label class="visually-hidden" for="password-field">Пароль</label>
-                  <a class="btn" href="#">Войти</a>
-                  <a class="registration-link" href="#">Забыли пароль?</a>
-                  <a class="registration-link" href="#">Новая регистрация</a>
+                  <div class="flex-registration">
+                    <a class="btn" href="#">Войти</a>
+                    <div class="registration-link">
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Новая регистрация</a>
+                    </div>  
+                  </div> 
                 </form>
               </div>
             </li>
-            <li class="basket opened">
+            <li class="basket shop">
               <a class="basket-button products" href="basket.html"><span class="visually-hidden">Корзина с товарами</span>2 товара</a>
               <div class="basket-table-wrapper">  
                 <table class="basket-table">
                   <tr class="row one-row">
                     <td class="product-close"><button type="submit" value="Удалить товар">Удалить товар</button></td>
-                    <td class="basket-item-image" href="#"><img src="img/product-1.jpg" width="33" height="33" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой""></td>
+                    <td class="basket-item-image" href="#"><img src="img/product-1.jpg" width="33" height="33" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
                     <td><a>Пломбир с апельсиновым джемом</a></td>
                     <td>1.5кг x <span>200 руб.</span></td>
                     <td>300 руб.</td>
@@ -72,7 +76,7 @@
                   </tr>
                   <tr class="row three-row">
                     <td colspan="4"></td>
-                    <td>Итого:750 руб.</td>
+                    <td>Итого: 750 руб.</td>
                   </tr>
                 </table>
                 <button class="click" type="submit">Оформить заказ</button>
@@ -183,7 +187,7 @@
           </li>
           <li class="catalog-item">
             <img src="img/product-5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
-            <a href="catalog-item.html">Сливочное с брусничным джемом</a>
+            <a href="catalog-item.html">Сливочное с брусничным<br> джемом</a>
             <b class="item-price">325  </b>
             <span>/кг</span>
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -211,7 +215,7 @@
           </li>
           <li class="catalog-item">
             <img src="img/product-9.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
-            <a href="catalog-item.html">Сливочно-ванильное с кусочками шоколада</a>
+            <a href="catalog-item.html">Сливочно-ванильное с<br> кусочками шоколада</a>
             <b class="item-price">440  </b> 
             <span>/кг</span>
             <a class="btn" href="#">Быстрый просмотр</a>
