@@ -1512,6 +1512,7 @@ li.features-item {
 }
 
 .sorting {
+	position: relative;
   width: 194px;
   min-height: 62px;
   
@@ -1521,7 +1522,6 @@ li.features-item {
 }
 
 .sorting-wrap {
-	position: relative;
 	height: 36px;
 	line-height: 36px;
 	vertical-align: middle;
@@ -1545,10 +1545,10 @@ li.features-item {
 	border-radius: 15px;
 }
 
-.sorting-select::before {
+.sorting-wrap::before {
 	position: absolute;
-  top: 0;
-	left: 0;
+  top: 44px;
+	left: 160px;
 	content: "";
 
 	width: 9px;
