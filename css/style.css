@@ -1722,6 +1722,18 @@ input[type="radio"]:checked + .fatness-radio::before:focus {
 	background-position: 0 0;
 }
 
+input[type="radio"] + .fatness-radio::before:disabled {
+  background-image: url("../img/radio-off-disabled.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
+input[type="radio"]:checked + .fatness-radio::before:disabled {
+  background-image: url("../img/radio-on-disabled.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
 .fillers {
 	width: 700px;
   min-height: 62px;
@@ -1796,6 +1808,18 @@ input[type="checkbox"] + .fillers-checkbox::before:focus {
 input[type="checkbox"]:checked + .fillers-checkbox::before:hover,
 input[type="checkbox"]:checked + .fillers-checkbox::before:focus {
   background-image: url("../img/checkbox-on-hover.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
+input[type="checkbox"] + .fillers-checkbox::before:disabled {
+  background-image: url("../img/checkbox-off-disabled.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
+input[type="checkbox"]:checked + .fillers-checkbox::before:disabled {
+  background-image: url("../img/checkbox-on-disabled.svg");
 	background-repeat: no-repeat; 
 	background-position: 0 0;
 }
