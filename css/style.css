@@ -1530,7 +1530,7 @@ li.features-item {
 }
 
 .sorting-select {
-	width: 206px;
+	width: 213px;
 
 	height: 36px;
 	line-height: 36px;
@@ -1670,8 +1670,8 @@ li.features-item {
 .fatness-radio {
 	position: relative;
 
-  padding-right: 14px;
-	padding-left: 32px;
+  padding-right: 13px;
+	padding-left: 31px;
 
 	cursor: pointer; 
 }
@@ -1750,7 +1750,7 @@ input[type="radio"]:checked + .fatness-radio::before:focus {
 }
 
 .fillers-checkbox:nth-child(4) {
-  padding-right: 18px;
+  padding-right: 16px;
 }
 
 
