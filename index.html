@@ -196,13 +196,15 @@
         </section>
         <section class="modal modal-feedback">
           <h2>Мы обязательно вам ответим!</h2>
-          <button class="modal-close" type="submit">Закрыть</button>
-          <input type="text" name="username" placeholder="Как вас зовут?" id="username-field">
-          <label class="visually-hidden" for="username-field">Как вас зовут?</label>
-          <input type="text" name="email" placeholder="Ваша почта для ответа?" id="email-field-3">
-          <label class="visually-hidden" for="email-field-3">Ваша почта для ответа?</label>
-          <textarea name="comment" rows="10" id="comment-field">Напишите что-нибудь...</textarea>
-          <button class="click" type="submit">Отправить</button>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <button class="modal-close" type="submit">Закрыть</button>
+            <input type="text" name="username" placeholder="Как вас зовут?" id="username-field">
+            <label class="visually-hidden" for="username-field">Как вас зовут?</label>
+            <input type="text" name="email" placeholder="Ваша почта для ответа?" id="email-field-3">
+            <label class="visually-hidden" for="email-field-3">Ваша почта для ответа?</label>
+            <textarea name="comment" rows="10" placeholder="Напишите что-нибудь..." id="comment-field"></textarea>
+            <button class="click" type="submit">Отправить</button>
+          </form>  
         </section>
       </div>
       <footer class="main-footer">

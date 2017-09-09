@@ -154,20 +154,20 @@ input[type="radio"].visually-hidden {
 .sub-site-navigation {
 	display: none;
 	position: absolute;
-  top: 37px;
+  top: 38px;
   left: 4px;
   z-index: 40;
 
 	width: 135px;
-	margin: 0;
 	padding: 0px 0px;
+	margin: 0;
 
 	list-style: none;
 	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
 }
 
 .sub-site-navigation li {
-	padding: 8px 20px;
+  padding: 8px 20px;
 }
 
 .sub-site-navigation a {
@@ -200,6 +200,18 @@ li.novelty {
 
 .sub-site-navigation li:active {
 	background-color: #f6b5a5; 
+}
+
+.sub-site-navigation li:first-child:hover, 
+.sub-site-navigation li:first-child:focus,
+.sub-site-navigation li:first-child:active {
+	border-radius: 5px; 
+}
+
+.sub-site-navigation li:last-child:hover, 
+.sub-site-navigation li:last-child:focus, 
+.sub-site-navigation li:last-child:active {
+	border-radius: 5px; 
 }
 
 .site-navigation-current {
@@ -784,9 +796,6 @@ li.novelty {
   width: 1146px;
   min-height: 320px;
   margin-bottom: 40px;
-
-  /* Временно для сетки */
-  outline: 2px solid #008000;
 }
 
 .catalog-list-index {
@@ -798,9 +807,6 @@ li.novelty {
 	padding: 0;
 
   list-style: none;
-
-  /* Временно для сетки */
-  outline: 2px solid #008000;
 }
 
 .catalog-item {
@@ -808,13 +814,7 @@ li.novelty {
 	width: 267px;
 	min-height: 267px;
 
-	padding-right: 9px;
-	padding-left: 9px;
-
 	text-align: center;
-
-  /* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .hit-mark::before {
@@ -1294,6 +1294,10 @@ li.features-item {
 	padding-right: 22px;
 	padding-left: 22px;
 	margin-left: 289px;
+}
+
+.main-footer {
+	margin-bottom: 30px;
 }
 
 .flex-main-footer {
@@ -1799,9 +1803,6 @@ input[type="checkbox"]:checked + .fillers-checkbox::before:focus {
 .filter-button {
 	width: 143px;
   height: 36px;
-
-	/* Временно для сетки */
-	outline: 2px solid #ffff00;
 }
 
 .filter select {
@@ -1854,9 +1855,6 @@ input[type="checkbox"]:checked + .fillers-checkbox::before:focus {
 	margin-bottom: 43px;
 
   list-style: none;
-
-	/* Временно для сетки */
-  outline: 2px solid #008000;
 }
 
 .catalog-list-inner .catalog-item {
