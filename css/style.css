@@ -1559,8 +1559,8 @@ li.features-item {
 	background-position: 0 0;
 }
 
-.sorting-wrap::before:hover,
-.sorting-wrap::before:focus {
+.sorting-wrap:hover::before,
+.sorting-wrap:focus::before {
 	position: absolute;
   top: 44px;
 	left: 160px;
