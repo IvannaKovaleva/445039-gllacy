@@ -1559,6 +1559,22 @@ li.features-item {
 	background-position: 0 0;
 }
 
+.sorting-wrap::before:hover,
+.sorting-wrap::before:focus {
+	position: absolute;
+  top: 44px;
+	left: 160px;
+	content: "";
+
+	width: 9px;
+	height: 5px;
+
+	background-image: url("../img/select-arrow-hover.svg");
+	background-repeat: no-repeat; 
+	background-position: 0 0;
+}
+
+
 .sorting-wrap:hover,
 .sorting-wrap:focus {
   background-color: #ffffff;
