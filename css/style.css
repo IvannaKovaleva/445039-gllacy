@@ -467,7 +467,7 @@ li.novelty {
 }
 
 .basket-table-wrapper {
-	display: non;
+	display: none;
 	position: absolute; 
 	top: 60px;
 	right: 0px;
@@ -630,7 +630,7 @@ li.novelty {
 .slider {
 	position: relative;
 
-	min-height: 256px;
+	min-height: 255px;
 	padding-top: 313px;
 	text-align: center;
 }
@@ -812,7 +812,7 @@ li.novelty {
 .popular {
   width: 1146px;
   min-height: 320px;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 
 .catalog-list-index {
@@ -975,12 +975,23 @@ li.features-item {
 .features-item p {
 	padding: 0;
 	padding-left: 56px;
-	margin-top: 8px;
+	margin-top: 10px;
 	margin-bottom: 18px;
 	margin-left: 19px;
 
+  width: 483px;
 	color: #323232;
 	font-weight: 400;
+	letter-spacing: 0.03px;
+}
+
+.features-item:nth-child(3) p, 
+.features-item:nth-child(4) p {
+	margin-top: 5px;
+}
+
+.features-item:nth-child(4) p {
+	margin-right: 10px;
 }
 
 .features-item:nth-child(1)::before {
@@ -1013,7 +1024,7 @@ li.features-item {
 
 .features-item:nth-child(3)::before {
 	position: absolute;
-	top: -7px;
+	top: -8px;
 	left: 20px;
 	content: "";
 
@@ -1027,7 +1038,7 @@ li.features-item {
 
 .features-item:nth-child(4)::before {
 	position: absolute;
-	top: -7px;
+	top: -8px;
 	left: 15px;
 	content: "";
 
@@ -1052,7 +1063,7 @@ li.features-item {
 
 	background-image: url("../img/strawberry-fon.png");
 	background-position: -52px 567px;
-	background-color: #f4cfcf;
+	background-color: #ffffff;
   border-radius: 15px;
 }
 
@@ -1120,7 +1131,7 @@ li.features-item {
 }
 
 .newsletter-form input {
-  width: 338px;
+  width: 340px;
 
 	line-height: 24px;
   font-weight: 400;
@@ -1330,6 +1341,7 @@ li.features-item {
 	padding-right: 22px;
 	padding-left: 22px;
 	margin-left: 289px;
+	letter-spacing:-0.6px;
 }
 
 .main-footer {
@@ -1936,6 +1948,17 @@ input[type="checkbox"]:checked + .fillers-checkbox::before:disabled {
 li.catalog-item:nth-child(4n) {
 	margin-right: 0px;
 } 
+
+.catalog-item-cranberries {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.catalog-item-chocolate {
+	padding-top: 2px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
 .pagination-list {
 	display: flex;
