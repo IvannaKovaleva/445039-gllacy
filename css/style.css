@@ -642,7 +642,7 @@ li.novelty {
 .slider-text {
 	width:700px;
 	margin: 0 auto;
-	margin-bottom: 30px;
+	margin-bottom: 31px;
 
   font-size: 60px;
 	line-height: 60px;
@@ -660,7 +660,7 @@ li.novelty {
 
 .slider .btn {
 	display: inline-block;
-	padding: 11px 42px;
+	padding: 11px 40px;
 
 	font-size: 32px;
 	line-height: 41px;
@@ -782,7 +782,7 @@ li.novelty {
 	margin: 0;
 	padding: 0;
 	padding-top: 15px;
-  padding-left: 20px;
+  padding-left: 18px;
 }
 
 .banner p {
@@ -793,7 +793,7 @@ li.novelty {
 	padding: 0;
 	padding-top: 15px;
 	padding-right: 18px;
-	padding-left: 18px;
+	padding-left: 19px;
 }
 
 .banner .btn {
@@ -802,8 +802,8 @@ li.novelty {
 	line-height: 24px;
 	text-decoration: none;
 
-	padding: 11px 21px;
-  margin-top: 44px;
+	padding: 8px 22px 12px 21px;
+  margin-top: 47px;
   margin-right: 22px;
 
 	float: right;
@@ -812,7 +812,7 @@ li.novelty {
 .popular {
   width: 1146px;
   min-height: 320px;
-  margin-bottom: 41px;
+  margin-bottom: 42px;
 }
 
 .catalog-list-index {
@@ -935,7 +935,7 @@ li.novelty {
 }
 
 .features {
-	min-height: 306px;
+	min-height: 307px;
 	margin-bottom: 40px;
 
 	background-image: url("../img/waffle.png");
@@ -1120,8 +1120,8 @@ li.features-item {
 	font-weight: 400;
 
 	padding: 0;
-	padding-top: 30px;
-	padding-bottom: 38px;
+	padding-top: 27px;
+	padding-bottom: 36px;
   padding-left: 23px;
 	margin: 0;
 }
@@ -1137,7 +1137,7 @@ li.features-item {
   font-weight: 400;
   word-spacing: 2px;
 
-  padding: 8px 13px;
+  padding: 9px 13px;
   margin-right: 8px;
   margin-left: 2px;
   
@@ -1159,6 +1159,7 @@ li.features-item {
   word-spacing: normal;
 
 	padding: 9px 16px;
+	padding-bottom: 10px;
 
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
@@ -1420,9 +1421,9 @@ li.features-item {
 	flex-wrap: wrap;
 	align-content: center;
 
-  width: 335px;
+  width: 328px;
   margin: 0;
-  margin-top: 12px;
+  margin-top: 9px;
   padding: 0;
 
   list-style: none;
@@ -1440,8 +1441,8 @@ li.features-item {
   width: 125px;
   min-height: 18px;
   
-  margin-top: 3px;
-  margin-left: 19px;
+  margin-top: 0px;
+  margin-left: 16px;
 }
 
 .main-footer-menu a {
@@ -1934,13 +1935,15 @@ input[type="checkbox"]:checked + .fillers-checkbox::before:disabled {
 	flex-wrap: wrap;
 
 	padding: 0;
+	padding-top: 1px;
 	margin: 0;
-	margin-bottom: 40px;
+	margin-bottom: 39px;
 
   list-style: none;
 }
 
 .catalog-list-inner .catalog-item {
+	padding-bottom: 1px;
 	margin-right: 26px;
 	margin-bottom: 41px;
 }
