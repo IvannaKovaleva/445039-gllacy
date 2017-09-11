@@ -812,7 +812,7 @@ li.novelty {
 .popular {
   width: 1146px;
   min-height: 320px;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 }
 
 .catalog-list-index {
@@ -975,7 +975,7 @@ li.features-item {
 .features-item p {
 	padding: 0;
 	padding-left: 56px;
-	margin-top: 10px;
+	margin-top: 11px;
 	margin-bottom: 18px;
 	margin-left: 19px;
 
@@ -996,7 +996,7 @@ li.features-item {
 
 .features-item:nth-child(1)::before {
 	position: absolute;
-	top: -4px;
+	top: -3px;
 	left: 20px;
 	content: "";
 
@@ -1010,7 +1010,7 @@ li.features-item {
 
 .features-item:nth-child(2)::before {
 	position: absolute;
-	top: -4px;
+	top: -3px;
 	left: 16px;
 	content: "";
 
@@ -1120,7 +1120,7 @@ li.features-item {
 	font-weight: 400;
 
 	padding: 0;
-	padding-top: 27px;
+	padding-top: 30px;
 	padding-bottom: 36px;
   padding-left: 23px;
 	margin: 0;
@@ -1188,7 +1188,7 @@ li.features-item {
 	line-height: 0;
 
   margin: auto;
-	margin-bottom: 10px;
+	margin-bottom: 9px;
 
 	background-image: url("../img/pin-and-map.png");
 	background-repeat: no-repeat;
@@ -1207,7 +1207,7 @@ li.features-item {
 
 .contacts {
 	position: absolute;
-	top: -379px;
+	top: -377px;
 	right: 50%;
 	margin-right: -572px; 
 
@@ -1234,7 +1234,7 @@ li.features-item {
 }
 
 .contacts .address-name {
-	margin-top: 2px;
+	margin-top: 3px;
 }
 
 .contacts .phone-number {
@@ -1250,12 +1250,12 @@ li.features-item {
 }
 
 .contacts .work-time {
-	margin-bottom: 26px;
+	margin-bottom: 25px;
 }
 
 .contacts button {
 	padding: 9px 28px 11px 27px;
-	margin: 0 23px;
+	margin: 0 22px;
 	margin-left: 25px;
 	letter-spacing: -0.5px;
 }
@@ -1424,7 +1424,7 @@ li.features-item {
 
   width: 328px;
   margin: 0;
-  margin-top: 9px;
+  margin-top: 12px;
   padding: 0;
 
   list-style: none;
@@ -1466,7 +1466,7 @@ li.features-item {
 .main-footer-menu .heart::before {
 	position: absolute;
 	top: 5px;
-	left: -21px;
+	left: -22px;
 	content: "";
 
 	width: 15px;
@@ -1946,7 +1946,7 @@ input[type="checkbox"]:checked + .fillers-checkbox::before:disabled {
 .catalog-list-inner .catalog-item {
 	padding-bottom: 1px;
 	margin-right: 26px;
-	margin-bottom: 39px;
+	margin-bottom: 40px;
 }
 
 li.catalog-item:nth-child(4n) {
@@ -1969,14 +1969,16 @@ li.catalog-item:nth-child(4n) {
 	justify-content: flex-end;
 
 	margin: 0; 
+	margin-right: 10px;
+	margin-bottom: 36px;
 	padding: 0;
 
 	list-style: none;
 }
 
 .pagination-item {
-	margin-right: 1px;
-	margin-left: 1px;
+	margin-right: 4px;
+	margin-left: 0px;
 }
 
 .pagination-item a {
@@ -1989,6 +1991,10 @@ li.catalog-item:nth-child(4n) {
 
   width: 26px;
   height: 26px;
+}
+
+.pagination-item-current {
+    margin-right: 1px;
 }
 
 .pagination-item-current a {
