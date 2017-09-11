@@ -1207,7 +1207,7 @@ li.features-item {
 
 .contacts {
 	position: absolute;
-	top: -376px;
+	top: -379px;
 	right: 50%;
 	margin-right: -572px; 
 
@@ -1230,7 +1230,7 @@ li.features-item {
 
 .contacts .address {
 	width: 150px;
-	margin-top: 27px;
+	margin-top: 28px;
 }
 
 .contacts .address-name {
@@ -1254,9 +1254,10 @@ li.features-item {
 }
 
 .contacts button {
-	padding-right: 24px;
-	padding-left: 20px;
-	margin: 0 21px;
+	padding: 9px 28px 11px 27px;
+	margin: 0 23px;
+	margin-left: 25px;
+	letter-spacing: -0.5px;
 }
 
 .contacts .address-name,
@@ -1548,7 +1549,7 @@ li.features-item {
   display: flex;
   flex-wrap: wrap;
 
-  margin-bottom: 41px;
+  margin-bottom: 39px;
   padding-top: 21px;
 }
 
@@ -1945,7 +1946,7 @@ input[type="checkbox"]:checked + .fillers-checkbox::before:disabled {
 .catalog-list-inner .catalog-item {
 	padding-bottom: 1px;
 	margin-right: 26px;
-	margin-bottom: 41px;
+	margin-bottom: 39px;
 }
 
 li.catalog-item:nth-child(4n) {
