@@ -467,7 +467,7 @@ li.novelty {
 }
 
 .basket-table-wrapper {
-	display: none;
+	display: non;
 	position: absolute; 
 	top: 60px;
 	right: 0px;
@@ -509,6 +509,10 @@ li.novelty {
 
 .basket-table td:nth-child(2) {
 	text-align: center;
+}
+
+.basket-table td:nth-child(3) {
+  width: 250px;
 }
 
 .basket-table td:nth-child(5) {
@@ -798,9 +802,9 @@ li.novelty {
 	line-height: 24px;
 	text-decoration: none;
 
-	padding: 11px 20px;
-  margin-top: 45px;
-  margin-right: 24px;
+	padding: 11px 21px;
+  margin-top: 44px;
+  margin-right: 22px;
 
 	float: right;
 }
@@ -1116,12 +1120,13 @@ li.features-item {
 }
 
 .newsletter-form input {
-  width: 335px;
+  width: 338px;
 
 	line-height: 24px;
   font-weight: 400;
+  word-spacing: 2px;
 
-  padding: 8px 16px;
+  padding: 8px 13px;
   margin-right: 8px;
   margin-left: 2px;
   
@@ -1202,8 +1207,6 @@ li.features-item {
 }
 
 .contacts p {
-	width: 230px;
-
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 400;
@@ -1214,23 +1217,37 @@ li.features-item {
 }
 
 .contacts .address {
-	margin-top: 28px;
+	width: 150px;
+	margin-top: 27px;
+}
+
+.contacts .address-name {
+	margin-top: 2px;
 }
 
 .contacts .phone-number {
+	width: 180px;
 	line-height: 23px;
 
-	margin-top: 19px;
+	margin-top: 16px;
+}
+
+.contacts .phone {
+	display: inline-block;
+	margin-top: 4px;
+}
+
+.contacts .work-time {
 	margin-bottom: 26px;
 }
 
 .contacts button {
-	padding-right: 23px;
-	padding-left: 23px;
-	margin: 0 23px;
+	padding-right: 24px;
+	padding-left: 20px;
+	margin: 0 21px;
 }
 
-.contacts span,
+.contacts .address-name,
 .contacts .phone {
 	color: #323232;
 	font-size: 18px;
