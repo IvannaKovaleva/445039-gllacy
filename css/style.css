@@ -700,42 +700,42 @@ li.novelty {
 	cursor: pointer;
 }
 
-#btn-1:checked ~ .site-wrapper #slide-1,
-#btn-2:checked ~ .site-wrapper #slide-2,
-#btn-3:checked ~ .site-wrapper #slide-3 {
+.btn-1:checked ~ .site-wrapper .slide-1,
+.btn-2:checked ~ .site-wrapper .slide-2,
+.btn-3:checked ~ .site-wrapper .slide-3 {
 	display: block;
 }
 
-#btn-1:checked ~ .site-wrapper {
+.btn-1:checked ~ .site-wrapper {
 	background-color: #849d8f;
 	background-image: url("../img/ice-cream-1.png");
 }
 
-#btn-2:checked ~ .site-wrapper {
+.btn-2:checked ~ .site-wrapper {
 	background-color: #8996a6;
 	background-image: url("../img/ice-cream-2.png");
 }
 
-#btn-3:checked ~ .site-wrapper {
+.btn-3:checked ~ .site-wrapper {
 	background-color: #9d8b84;
 	background-image: url("../img/ice-cream-3.png");
 }
 
-#btn-1:checked ~ .site-wrapper label[for="btn-1"],
-#btn-2:checked ~ .site-wrapper label[for="btn-2"],
-#btn-3:checked ~ .site-wrapper label[for="btn-3"] {
+.btn-1:checked ~ .site-wrapper label[for="btn-1"],
+.btn-2:checked ~ .site-wrapper label[for="btn-2"],
+.btn-3:checked ~ .site-wrapper label[for="btn-3"] {
 	background-color: #ffffff;
 }
 
-#btn-2:checked ~ .site-wrapper .search-button,
-#btn-2:checked ~ .site-wrapper .login-button,
-#btn-2:checked ~ .site-wrapper .basket-button {
+.btn-2:checked ~ .site-wrapper .search-button,
+.btn-2:checked ~ .site-wrapper .login-button,
+.btn-2:checked ~ .site-wrapper .basket-button {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
-#btn-3:checked ~ .site-wrapper .search-button,
-#btn-3:checked ~ .site-wrapper .login-button,
-#btn-3:checked ~ .site-wrapper .basket-button {
+.btn-3:checked ~ .site-wrapper .search-button,
+.btn-3:checked ~ .site-wrapper .login-button,
+.btn-3:checked ~ .site-wrapper .basket-button {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
