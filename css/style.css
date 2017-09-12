@@ -1587,7 +1587,7 @@ li.features-item {
 .sorting-select {
 	width: 213px;
 
-	height: 36px;
+	height: 38px;
 	line-height: 36px;
 	vertical-align: middle;
 
@@ -1735,11 +1735,12 @@ li.features-item {
 .fatness-radio {
 	position: relative;
 
-  padding-right: 15px;
-	padding-left: 31px;
+  padding-right: 16px;
+	padding-left: 30px;
 
 	cursor: pointer; 
 }
+
 
 input[type="radio"] + .fatness-radio::before {
 	position: absolute;
@@ -1966,10 +1967,11 @@ li.catalog-item:nth-child(4n) {
 
 .pagination-list {
 	display: flex;
-	justify-content: flex-end;
+
+	width: 197px;
 
 	margin: 0; 
-	margin-right: 10px;
+	margin-left: auto;
 	margin-bottom: 36px;
 	padding: 0;
 
@@ -1977,8 +1979,8 @@ li.catalog-item:nth-child(4n) {
 }
 
 .pagination-item {
-	margin-right: 4px;
-	margin-left: 0px;
+	margin-right: 3px;
+	margin-left: 1px;
 }
 
 .pagination-item a {
