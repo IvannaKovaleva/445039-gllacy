@@ -1579,19 +1579,19 @@ li.features-item {
 
   margin-top: 5px;
 	padding: 0;
-	background-color: rgba(161, 181, 170, 0.5);
+	padding-left: 12px;
+	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 15px;
 	overflow: hidden;
 }
 
 .sorting-select {
-	width: 213px;
+	width: 202px;
 
 	height: 38px;
 	line-height: 36px;
 	vertical-align: middle;
 
-	padding-left: 12px;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 15px;
 }
@@ -1608,6 +1608,10 @@ li.features-item {
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	border-top: 9px solid #ffffff;
+}
+
+.sorting-wrap:hover {
+  background-color: rgb(255, 255, 255);	
 }
 
 .sorting-wrap:hover::before,
